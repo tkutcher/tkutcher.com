@@ -1,0 +1,24 @@
+image: node:12.2.0
+
+stages:
+  - build
+
+
+pages:
+  stage: build
+
+  script:
+    - npm install
+    - npm link @angular/cli
+    - ng build --prod
+    - ng run tkutcher-dot-com:server
+    - npx angular-prerender
+    - mkdir -p .public/
+    - cp -r dist/tkutcher-dot-com/browser/* .public/
+    - cp .public/index.html .public/404.html
+  after_script:
+    - mv .public public
+  artifacts:
+    paths:
+      - public
+  only: [master]

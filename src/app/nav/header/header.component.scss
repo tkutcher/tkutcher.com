@@ -1,0 +1,39 @@
+@import "src/styles/colors";
+
+#header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 99;
+  padding: 4px 24px;
+  display: flex;
+  width: 100%;
+}
+
+app-cmd-prompt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .nav-item {
+    margin: 0 12px;
+  }
+
+  .nav-item:hover {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 300ms ease;
+  }
+}

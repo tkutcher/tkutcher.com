@@ -1,0 +1,21 @@
+#contact {
+  color: rgba(255, 255, 255, 0.7);
+
+  a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.profile-link {
+  opacity: 0.4;
+  transition: opacity 500ms ease, transform 500ms ease;
+
+
+}
+
+.profile-link :hover {
+  opacity: 0.8;
+  transform: translateY(-6px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}

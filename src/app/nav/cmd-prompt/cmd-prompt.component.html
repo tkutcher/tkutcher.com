@@ -1,0 +1,40 @@
+<div class="cmd-prompt">
+  <div class="prompt-left">
+    <div class="pipe-wrapper">
+      <div class="left-pipe"></div>
+    </div>
+    <div class="prompt-displays">
+      <div class="hexed-prompt">
+        <span class="prompt-username">you</span>
+        <span class="prompt-domain">@tkutcher.com</span>
+        <span>:</span>
+        <span class="prompt-path"><b>{{promptPath}}</b></span>
+      </div>
+      <div class="literal-prompt">
+        <span>{{promptText}}</span>
+        <div class="cursor"></div>
+      </div>
+    </div>
+  </div>
+  <div class="prompt-middle">
+    <ng-content></ng-content>
+  </div>
+  <div class="prompt-left" fxShow fxHide.lt-md="true">
+    <div class="prompt-displays">
+      <div class="hexed-prompt">
+        <span
+            [class.prompt-status-ok]="promptStatus.kind === 'ok'"
+            [class.prompt-status-bad]="promptStatus.kind === 'bad'"
+        >
+          {{ promptStatus.kind === 'ok' ? '&#10004;' :
+              promptStatus.kind === 'bad' ? '&#10007;' : ''}}
+          {{ promptStatus.code }}
+          {{ promptStatus.name }}
+        </span>
+      </div>
+    </div>
+    <div class="pipe-wrapper">
+      <div class="right-pipe"></div>
+    </div>
+  </div>
+</div>

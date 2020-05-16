@@ -1,0 +1,19 @@
+#footer {
+  margin-top: 18vh;
+
+  opacity: 0.4;
+
+  background-color: #232323;
+  height: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: smaller;
+  font-style: italic;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+
+  a {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}

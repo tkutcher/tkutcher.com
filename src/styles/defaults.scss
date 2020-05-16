@@ -1,0 +1,30 @@
+@import "colors";
+@import "typography";
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $default-font;
+  color: $text-color-default;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+span {
+  display: inline-block;
+}
+
+.block-component {
+  display: block;
+  height: 100%;
+}
+
+.page-content-wrap {
+  margin: 0 auto;
+  max-width: 850px;
+  width: 95vw;
+  min-height: 1798px;
+}

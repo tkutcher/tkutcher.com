@@ -1,0 +1,15 @@
+<div>
+
+  <div class="page-content-wrap" id="contact">
+    You can reach me at <a href="mailto:me@tkutcher.com">me@tkutcher.com</a> or on social media:
+    <div style="display: flex; align-items: center; justify-content: center;">
+      <div *ngFor="let profileLink of profileLinks_" style="margin: 12px;" class="profile-link">
+        <a [href]="profileLink.link" style="display: flex; flex-direction: column; align-items: center">
+          <i [class]="'fab fa-2x ' + profileLink.faName" style="height: 40px "></i>
+          <div style="height: 20px">{{profileLink.handle}}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>

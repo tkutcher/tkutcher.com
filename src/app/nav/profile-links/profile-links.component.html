@@ -1,0 +1,5 @@
+<div id="profile-links" [@listAnimation]="profileLinks_.length" fxShow fxHide.lt-md="true">
+  <a *ngFor="let profileLink of profileLinks_" [href]="profileLink.link" class="profile-link">
+    <i [class]="'fab fa-2x ' + profileLink.faName"></i>
+  </a>
+</div>

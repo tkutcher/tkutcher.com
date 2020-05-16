@@ -1,0 +1,138 @@
+@import "src/styles/typography";
+@import "src/styles/colors";
+
+$prompt-bg-color: #444444;
+$prompt-username-color: #eef49c;
+$prompt-domain-color: #C6F4CD;
+$prompt-path-color: #4AAEF8;
+$prompt-status-ok-color: #55F83C;
+$prompt-status-bad-color: #f84334;
+
+$prompt-height: 60px;
+$prompt-line-height: 24px;
+
+
+.cmd-prompt {
+  font-family: $monaco-font;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: $prompt-height;
+}
+
+.prompt-left,
+.prompt-right {
+  display: flex;
+  align-items: center;
+}
+
+.pipe-wrapper {
+  height: 100%;
+  box-sizing: border-box;
+  padding: ($prompt-line-height / 2) 0;
+  overflow: hidden;
+
+  .left-pipe, .right-pipe {
+    border: solid 2px $prompt-bg-color;
+    border-radius: 4px;
+    width: 24px;
+    height: 100%;
+  }
+
+  .left-pipe {
+    margin-right: -4px;  // to account for rounded border.
+    border-right: 0;
+  }
+
+  .right-pipe {
+    margin-left: -4px;  // to account for rounded border.
+    border-left: 0;
+  }
+}
+
+.hexed-prompt {
+  width: max-content;
+  height: $prompt-line-height;
+  background: $prompt-bg-color;
+  color: #fff;
+  position: relative;
+  line-height: $prompt-line-height;
+  padding: 2px 8px;
+  align-items: center;
+  display: flex;
+}
+
+.hexed-prompt:before,
+.hexed-prompt:after {
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  border: ($prompt-line-height / 2) solid transparent;
+  top: 0;
+}
+
+.hexed-prompt:after {
+  left: 100%;
+  border-left: 12px solid $prompt-bg-color;
+}
+
+.hexed-prompt:before{
+  right: 100%;
+  border-right: 12px solid $prompt-bg-color;
+}
+
+.prompt-displays {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.literal-prompt {
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.cursor {
+  height: $prompt-line-height;
+  margin-left: 2px;
+  width: 12px;
+  background-color: white;
+  opacity: 0.8;
+  animation: blink-animation 1.5s steps(2, start) infinite;
+  -webkit-animation: blink-animation 1.5s steps(2, start) infinite;
+}
+
+@keyframes blink-animation { to { visibility: hidden; } }
+@-webkit-keyframes blink-animation { to { visibility: hidden; } }
+
+
+.prompt-username {
+  color: $prompt-username-color;
+}
+
+.prompt-domain {
+  color: $prompt-domain-color;
+}
+
+.prompt-path {
+  color: $prompt-path-color;
+  font-weight: bolder;
+}
+
+.prompt-status-ok {
+  color: $prompt-status-ok-color;
+}
+
+.prompt-status-bad {
+  color: $prompt-status-bad-color;
+}
+
+.prompt-middle {
+  flex-grow: 1;
+  padding: 0 ($prompt-line-height / 2);
+  //display: flex;
+  //justify-content: center;
+}

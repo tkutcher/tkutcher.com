@@ -1,0 +1,45 @@
+@import "src/styles/colors";
+
+.vid-highlight-blocks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vid-highlight-block {
+  background-color: $bg-top;
+  border-radius: 8px;
+  padding: 12px;
+  max-width: 360px;
+  margin: 8px;
+
+  .img-container img {
+    max-width: 200px;
+    border-radius: 2px;
+    animation: pulsate 4s linear infinite;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.vid-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    border: none;
+  }
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.description {
+  padding-top: 12px;
+}
