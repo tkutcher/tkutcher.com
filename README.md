@@ -14,4 +14,3 @@ Source code for https://tkutcher.com
 - `ng serve` for development server
 - `ng build --prod` for the standard build
 - `ng run tkutcher-dot-com:server && npx angular-prerender` to do the SSR build
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
