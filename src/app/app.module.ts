@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { ErrorHandler, inject, NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -11,6 +11,8 @@ import { GithubApiService } from './general/services/github-api/github-api.servi
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { AppBioPageModule } from './bio-page/bio-page.module';
+import { DOCUMENT, ViewportScroller } from '@angular/common';
+import { CustomViewportScroller } from './general/custom-viewport-scroller';
 
 
 @NgModule({
@@ -31,7 +33,12 @@ import { AppBioPageModule } from './bio-page/bio-page.module';
   ],
   providers: [
     HttpClientModule,
-    GithubApiService
+    GithubApiService,
+    {
+      provide: ViewportScroller,
+      useFactory: () => new CustomViewportScroller('parallax-wrap',
+        inject(DOCUMENT), window, inject(ErrorHandler))
+    },
   ],
   bootstrap: [AppComponent]
 })

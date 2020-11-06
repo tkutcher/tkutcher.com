@@ -13,9 +13,6 @@ export class SoftwareProjectsOverviewComponent implements OnInit {
   jgradeForks;
   jgradeWatchers;
 
-  prettyRepoForks;
-  prettyRepoWatchers;
-
   constructor(
     private github: GithubApiService,
     private gitlab: GitlabApiService,
@@ -27,10 +24,6 @@ export class SoftwareProjectsOverviewComponent implements OnInit {
       this.jgradeWatchers = r['stargazers_count'];
     });
 
-    this.gitlab.getProject('16657933').subscribe((r) => {
-      this.prettyRepoForks = r['forks_count'];
-      this.prettyRepoWatchers = r['star_count'];
-    });
   }
 
 }
