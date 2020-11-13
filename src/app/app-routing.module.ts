@@ -19,8 +19,9 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
-    scrollOffset: () => [0, HEADER_HEIGHT]
-  })],
+    scrollOffset: () => [0, HEADER_HEIGHT],
+    relativeLinkResolution: 'legacy'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
