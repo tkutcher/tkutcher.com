@@ -10,10 +10,11 @@
   background-color: $bg-top;
   border-radius: 8px;
   padding: 12px;
-  margin: 4px;
+  margin: 8px;
   max-width: 375px;
 
   .img-container img {
+    max-height: 130px;
     max-width: 200px;
     border-radius: 2px;
     animation: pulsate 4s linear infinite;

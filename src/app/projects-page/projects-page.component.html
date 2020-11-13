@@ -1,7 +1,53 @@
 <div>
 
   <div class="page-content-wrap">
-    <app-software-projects-overview></app-software-projects-overview>
+
+    <!-- JGrade. -->
+    <div class="project-section" wmAnimate="landing" speed="fast" aos="0.5">
+      <h3 id="jgrade">
+        <a href="https://github.com/tkutcher/jgrade">JGrade</a>
+      </h3>
+      <div>
+        JGrade is a Java package I developed while a TA for the Data Structures class at Johns Hopkins.
+        It was built for the Gradescope Autograder and implements features for different grading strategies,
+        grading based on checkstyle, and more. Check out the repository or the <a href="https://tkutcher.gitlab.io/jgrade/api/">API docs</a> for more.
+      </div>
+    </div>
+
+
+    <div class="project-section" wmAnimate="landing" speed="fast" aos="0" delay="0.7">
+      <h3 id="quickbase-client">
+        <a href="https://github.com/tkutcher/quickbase-client">QuickBase Client</a>
+      </h3>
+      <div>
+        <p>
+          For the 2020 QuickBase Virtual Hackathon, I developed two utilities for developers and QuickBase users
+          to better maintain their QuickBase apps.
+        </p>
+        <p>
+          The first is the open-source quickbase-client Python package which can be found on GitHub
+          <a href="https://github.com/tkutcher/quickbase-client">here</a>. The package focuses on “code that writes code” to allow users to interact with the QuickBase API from a high level to provide easier development interfacing with QuickBase.
+        </p>
+        <p>
+          The second was a "Metprogramming with QuickBase" app for managing QuickBase formulas. Utilizing the package above to talk
+          with the QuickBase API, and QuickBase web-hooks to send data to a web-service, users can manage their QuickBase formulas for
+          their app.
+        </p>
+        <p>
+          You can check out a demo for each of those submissions:
+        </p>
+        <div style="display: flex; justify-content: center;" class="demo-videos">
+          <div class="vid-row">
+            <iframe width="350" height="197" src="https://www.youtube.com/embed/4zlMlxyPOp8" allowfullscreen></iframe>
+          </div>
+          <div class="vid-row">
+            <iframe width="350" height="197" src="https://www.youtube.com/embed/rCYNq4XK9xU" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
   <app-footer></app-footer>
 </div>

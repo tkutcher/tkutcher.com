@@ -13,6 +13,7 @@ import { ProjectsPageComponent } from './projects-page/projects-page.component';
 import { AppBioPageModule } from './bio-page/bio-page.module';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { CustomViewportScroller } from './general/custom-viewport-scroller';
+import { AnimateModule } from '@wizdm/animate';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { CustomViewportScroller } from './general/custom-viewport-scroller';
     AppNavModule,
     AppHomePageModule,
     AppBioPageModule,
+    AnimateModule
   ],
   providers: [
     HttpClientModule,

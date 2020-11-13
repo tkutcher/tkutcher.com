@@ -1,0 +1,33 @@
+
+
+.project-section {
+  margin: 20vh 0;
+}
+
+a, h3 {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+h3 a {
+  font-size: xx-large;
+  text-decoration: none;
+}
+
+
+
+.demo-videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .vid-row {
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    iframe {
+      border: none;
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AppNavModule } from '../nav/nav.module';
 import { AnimateModule } from '@wizdm/animate';
 import { AthleticsOverviewComponent } from './athletics-overview/athletics-overview.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AthleticsOverviewComponent } from './athletics-overview/athletics-overv
   imports: [
     CommonModule,
     AppNavModule,
-    AnimateModule
+    AnimateModule,
+    AppRoutingModule
   ]
 })
 export class AppHomePageModule { }
