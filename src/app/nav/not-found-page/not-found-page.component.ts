@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CmdPromptService } from '../cmd-prompt/cmd-prompt.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-not-found-page',
@@ -8,11 +9,15 @@ import { CmdPromptService } from '../cmd-prompt/cmd-prompt.service';
 })
 export class NotFoundPageComponent implements OnInit, OnDestroy {
 
+  url;
+
   constructor(
-    private cmdPromptService: CmdPromptService
+    private cmdPromptService: CmdPromptService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
+    this.url = this.route.snapshot.url;
     this.cmdPromptService.setStatus({
       kind: 'bad',
       name: 'NOT_FOUND',
