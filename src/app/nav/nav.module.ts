@@ -11,6 +11,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { CmdPromptPathTruncatePipe } from './cmd-prompt/cmd-prompt-path-truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatMenuModule } from '@angular/material/menu';
     NotFoundPageComponent,
     ProfileLinks,
     FooterComponent,
-    ParallaxedBgComponent
+    ParallaxedBgComponent,
+    CmdPromptPathTruncatePipe
   ],
   exports: [
     HeaderComponent,

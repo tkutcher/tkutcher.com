@@ -5,10 +5,12 @@
     </div>
     <div class="prompt-displays">
       <div class="hexed-prompt">
-        <span class="prompt-username">you</span>
-        <span class="prompt-domain">@tkutcher.com</span>
-        <span>:</span>
-        <span class="prompt-path"><b>{{promptPath}}</b></span>
+        <a routerLink="/">
+          <span class="prompt-username">you</span>
+          <span class="prompt-domain">@tkutcher.com</span>
+          <span style="color: white">:</span>
+          <span class="prompt-path"><b>{{promptPath | cmdPromptPathTruncate}}</b></span>
+        </a>
       </div>
       <div class="literal-prompt">
         <span>{{promptText}}</span>
@@ -19,7 +21,7 @@
   <div class="prompt-middle">
     <ng-content></ng-content>
   </div>
-  <div class="prompt-left" fxShow fxHide.lt-md="true">
+  <div class="prompt-right" fxShow fxHide.lt-md="true">
     <div class="prompt-displays">
       <div class="hexed-prompt">
         <span

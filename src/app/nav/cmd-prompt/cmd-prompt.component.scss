@@ -24,6 +24,15 @@ $prompt-line-height: 24px;
 .prompt-right {
   display: flex;
   align-items: center;
+  width: 350px;
+}
+
+.prompt-left {
+  justify-content: flex-start;
+}
+
+.prompt-right {
+  justify-content: flex-end;
 }
 
 .pipe-wrapper {
