@@ -18,6 +18,7 @@ export class NotFoundPageComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.url = this.route.snapshot.url;
+    this.cmdPromptService.setPath('~');
     this.cmdPromptService.setStatus({
       kind: 'bad',
       name: 'NOT_FOUND',

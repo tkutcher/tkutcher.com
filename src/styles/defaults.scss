@@ -17,6 +17,16 @@ span {
   display: inline-block;
 }
 
+a {
+  color: $text-color-default;
+
+}
+
+a:hover {
+  color: white;
+  transition: color 200ms ease;
+}
+
 .block-component {
   display: block;
   height: 100%;
