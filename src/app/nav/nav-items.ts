@@ -5,7 +5,7 @@ export interface INavItem {
 }
 
 
-interface IProfileLink {
+export interface IProfileLink {
   name: string;
   faName: string;
   handle: string;
@@ -24,49 +24,49 @@ export const navItems: INavItem[] = [
 export const profileLinks: IProfileLink[] = [
     {
       name: 'linkedin',
-      faName: 'fa-linkedin',
-      handle: '',
+      faName: 'fab fa-linkedin',
+      handle: 'Tim Kutcher',
       link: 'https://www.linkedin.com/in/tim-kutcher-a7831416a/'
     },
     {
       name: 'facebook',
-      faName: 'fa-facebook',
-      handle: '',
+      faName: 'fab fa-facebook',
+      handle: 'Tim Kutcher',
       link: 'https://www.facebook.com/tim.kutcher.3'
     },
     {
       name: 'instagram',
-      faName: 'fa-instagram',
+      faName: 'fab fa-instagram',
       handle: '@tkutcher_',
       link: 'https://www.instagram.com/tkutcher_/'
     },
     {
       name: 'twitter',
-      faName: 'fa-twitter',
+      faName: 'fab fa-twitter',
       handle: '@tkutcher_',
       link: 'https://twitter.com/tkutcher_'
     },
     {
       name: 'youtube',
-      faName: 'fa-youtube',
-      handle: '',
+      faName: 'fab fa-youtube',
+      handle: 'tkutcher',
       link: 'https://www.youtube.com/channel/UCHq9PYerV7OnYbJw5EHKQlA'
     },
     {
       name: 'github',
-      faName: 'fa-github',
+      faName: 'fab fa-github',
       handle: '@tkutcher',
       link: 'https://github.com/tkutcher'
     },
     {
       name: 'gitlab',
-      faName: 'fa-gitlab',
+      faName: 'fab fa-gitlab',
       handle: '@tkutcher',
       link: 'https://gitlab.com/tkutcher'
     },
     {
       name: 'stack-overflow',
-      faName: 'fa-stack-overflow',
+      faName: 'fab fa-stack-overflow',
       handle: '@tplusk',
       link: 'https://stackoverflow.com/users/9970629/tplusk'
     },

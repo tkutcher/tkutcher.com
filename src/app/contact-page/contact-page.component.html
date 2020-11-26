@@ -1,13 +1,28 @@
 <div>
 
-  <div class="page-content-wrap" id="contact">
-    You can reach me at <a href="mailto:me@tkutcher.com">tim@tkutcher.com</a> or on social media:
-    <div style="display: flex; align-items: center; justify-content: center; padding-top: 20px">
-      <div *ngFor="let profileLink of profileLinks_" style="margin: 12px;" class="profile-link">
-        <a [href]="profileLink.link" style="display: flex; flex-direction: column; align-items: center">
-          <i [class]="'fab fa-2x ' + profileLink.faName" style="height: 40px "></i>
-          <div style="height: 20px">{{profileLink.handle}}</div>
-        </a>
+  <div class="page-content-wrap">
+
+    <h1 style="padding-top: 50px">Where you can find me</h1>
+
+    <div class="contact-grid" fxLayout.gt-xs="row" fxLayout="column">
+      <div class="contact-grid-square" *ngFor="let block of contactBlocks">
+        <div class="contact-grid-square-inner">
+          <div class="contact-grid-square-front mat-elevation-z4">
+            <div class="icon-container">
+              <i [class]="'fas fa-5x ' + block.faIcon"></i>
+            </div>
+            <div style="padding: 8px">
+              <span>{{block.title}}</span>
+            </div>
+          </div>
+          <div class="contact-grid-square-back mat-elevation-z8">
+            <div style="margin: 0 auto">
+              <div *ngFor="let item of block.contents">
+                <a [href]="item.link"><i [class]="'fa-2x ' + item.faName"></i>{{item.handle}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
