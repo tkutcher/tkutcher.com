@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 
@@ -20,7 +20,8 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
     ])
   ]
 })
-export class WelcomeBlurbComponent implements OnInit {
+export class WelcomeBlurbComponent implements OnInit, AfterViewInit {
+  isLoaded = false;
 
   welcomeParagraphs = [
     '<b>Welcome</b>',
@@ -34,6 +35,12 @@ export class WelcomeBlurbComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.isLoaded = true;
+    }, 300);
+  }
+
+  ngAfterViewInit(): void {
   }
 
 }

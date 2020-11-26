@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class CmdPromptPathTruncatePipe implements PipeTransform {
 
   transform(url: string): unknown {
-    return url.substr(0, 14);
+    return url ? url.substr(0, 14) : '';
   }
 
 }
