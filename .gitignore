@@ -1,32 +1,26 @@
-# Project-Specific
+## Project-Specific
 __archive
 
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
+## Artifcats
+# Compiled output
 /dist
 /tmp
 /out-tsc
-# Only exists if Bazel was run
 /bazel-out
 
-# dependencies
+## Libraries
 /node_modules
 
-# profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+## IDE's
+# Include PyCharm run configurations, dictionaries, and copyright setup.
+.idea/*
+!.idea/*.iml
+!.idea/runConfigurations
+!.idea/dictionaries
+!.idea/copyright
 
-# IDE - VSCode
+# VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -34,7 +28,15 @@ speed-measure-plugin*.json
 !.vscode/extensions.json
 .history/*
 
-# misc
+# Other
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+## Misc
 /.sass-cache
 /connect.lock
 /coverage
@@ -44,6 +46,6 @@ yarn-error.log
 testem.log
 /typings
 
-# System Files
+## System Files
 .DS_Store
 Thumbs.db
