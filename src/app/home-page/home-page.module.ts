@@ -7,6 +7,7 @@ import { AppNavModule } from '../nav/nav.module';
 import { AnimateModule } from '@wizdm/animate';
 import { AthleticsOverviewComponent } from './athletics-overview/athletics-overview.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { AppContactModule } from '../contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AppRoutingModule } from '../app-routing.module';
     CommonModule,
     AppNavModule,
     AnimateModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AppContactModule
   ]
 })
 export class AppHomePageModule { }

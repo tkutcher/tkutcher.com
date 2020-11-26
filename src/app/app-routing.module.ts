@@ -4,7 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BioPageComponent } from './bio-page/bio-page.component';
 import { NotFoundPageComponent } from './nav/not-found-page/not-found-page.component';
 import { HEADER_HEIGHT } from './general/styling-consts';
-import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ContactPageComponent } from './contact/contact-page/contact-page.component';
 import { ProjectsPageComponent } from './projects-page/projects-page.component';
 
 const routes: Routes = [

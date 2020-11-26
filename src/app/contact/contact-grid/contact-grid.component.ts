@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProfileLink, profileLinks } from '../nav/nav-items';
+import { IProfileLink, profileLinks } from '../../nav/nav-items';
 
 
 interface IContactBlock {
@@ -8,12 +8,13 @@ interface IContactBlock {
   contents: IProfileLink[];
 }
 
+
 @Component({
-  selector: 'app-contact-page',
-  templateUrl: './contact-page.component.html',
-  styleUrls: ['./contact-page.component.scss']
+  selector: 'app-contact-grid',
+  templateUrl: './contact-grid.component.html',
+  styleUrls: ['./contact-grid.component.scss']
 })
-export class ContactPageComponent implements OnInit {
+export class ContactGridComponent implements OnInit {
 
   readonly contactBlocks: IContactBlock[] = [
     {
