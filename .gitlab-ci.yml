@@ -1,24 +1,28 @@
-image: node:12.2.0
+image: nikolaik/python-nodejs:latest
 
 stages:
   - build
+  - deploy
 
-
-pages:
+build:
   stage: build
-
-  script:
-    - npm install
-    - npm link @angular/cli
-    - ng build --prod
-    - ng run tkutcher-dot-com:server
-    - npx angular-prerender
-    - mkdir -p .public/
-    - cp -r dist/tkutcher-dot-com/browser/* .public/
-    - cp .public/index.html .public/404.html
-  after_script:
-    - mv .public public
   artifacts:
     paths:
-      - public
-  only: [master]
+      - .dist/
+  script:
+    - ./scripts/build.sh
+    - mkdir -p .dist/
+    - cp -r dist/tkutcher-dot-com/browser/* .dist/
+
+deploy:
+  stage: deploy
+  needs:
+    - build
+  only:
+    refs:
+      - master
+  before_script:
+    - pip install awscli
+  script:
+    - cd .dist
+    - aws s3 sync . s3://${S3_BUCKET_NAME} --delete
