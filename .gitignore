@@ -1,6 +1,9 @@
 ## Project-Specific
 __archive
 
+## Environment
+.env
+
 ## Artifcats
 # Compiled output
 /dist
