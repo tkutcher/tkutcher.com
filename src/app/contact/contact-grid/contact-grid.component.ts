@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IProfileLink, profileLinks } from '../../nav/nav-items';
+import { IProfileLink, profileLinks } from '~/nav/nav-items';
 
 
 interface IContactBlock {

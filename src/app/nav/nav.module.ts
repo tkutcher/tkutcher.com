@@ -6,7 +6,7 @@ import { ProfileLinks } from './profile-links/profile-links';
 import { FooterComponent } from './footer/footer.component';
 import { ParallaxedBgComponent } from './parallaxed-bg/parallaxed-bg.component';
 import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from '../app-routing.module';
+import { AppRoutingModule } from '~/app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';

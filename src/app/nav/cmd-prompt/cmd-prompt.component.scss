@@ -1,5 +1,5 @@
-@import "src/styles/typography";
-@import "src/styles/colors";
+@import "typography";
+@import "colors";
 
 $prompt-bg-color: #444444;
 $prompt-username-color: #eef49c;
@@ -142,6 +142,4 @@ $prompt-line-height: 24px;
 .prompt-middle {
   flex-grow: 1;
   padding: 0 ($prompt-line-height / 2);
-  //display: flex;
-  //justify-content: center;
 }

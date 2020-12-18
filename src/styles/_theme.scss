@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+$tkutcher-dot-com-primary: mat-palette($mat-indigo);
+$tkutcher-dot-com-accent: mat-palette($mat-pink, A200, A100, A400);
+$tkutcher-dot-com-warn: mat-palette($mat-red);
+
+$tkutcher-dot-com-theme: mat-dark-theme((
+        color: (
+                primary: $tkutcher-dot-com-primary,
+                accent: $tkutcher-dot-com-accent,
+                warn: $tkutcher-dot-com-warn,
+        )
+));

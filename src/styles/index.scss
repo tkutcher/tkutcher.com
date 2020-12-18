@@ -1,5 +1,8 @@
 @import "consts";
 @import "colors";
 @import "typography";
-@import "mat-styles";
+@import "theme";
 @import "defaults";
+
+@include mat-core();
+@include angular-material-theme($tkutcher-dot-com-theme);

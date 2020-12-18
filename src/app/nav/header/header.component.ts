@@ -4,7 +4,7 @@ import { headerAppearanceAnimation, HeaderAppearanceState } from './header.anima
 import { INavItem, navItems } from '../nav-items';
 import { CmdPromptService } from '../cmd-prompt/cmd-prompt.service';
 import { NavService } from '../nav.service';
-import { HEADER_HEIGHT } from '../../general/styling-consts';
+import { HEADER_HEIGHT } from '~/general/styling-consts';
 
 
 @Component({
