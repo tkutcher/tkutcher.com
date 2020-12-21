@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BioPageComponent } from './bio-page.component';
 import { AppNavModule } from '../nav/nav.module';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -9,7 +11,9 @@ import { AppNavModule } from '../nav/nav.module';
   declarations: [BioPageComponent],
   imports: [
     CommonModule,
-    AppNavModule
+    AppNavModule,
+    MatButtonModule,
+    MatIconModule
   ]
 })
 export class AppBioPageModule { }
