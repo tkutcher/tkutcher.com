@@ -1,7 +1,10 @@
 @import "colors";
 @import "typography";
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 body {
   margin: 0;
   box-sizing: border-box;
@@ -9,7 +12,9 @@ body {
   color: $text-color-default;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -19,7 +24,6 @@ span {
 
 a {
   color: $text-color-default;
-
 }
 
 a:hover {

@@ -1,5 +1,5 @@
-import { ViewportScroller } from '@angular/common';
-import { ErrorHandler } from '@angular/core';
+import { ViewportScroller } from "@angular/common";
+import { ErrorHandler } from "@angular/core";
 
 // https://stackblitz.com/edit/angular-custom-viewport-scroller?file=src%2Fapp%2Fcustom-viewport-scroller.ts
 
@@ -10,7 +10,12 @@ import { ErrorHandler } from '@angular/core';
 export class CustomViewportScroller implements ViewportScroller {
   private offset: () => [number, number] = () => [0, 0];
 
-  constructor(private scrollElementID: string, private document: Document, private window: any, private errorHandler: ErrorHandler) { }
+  constructor(
+    private scrollElementID: string,
+    private document: Document,
+    private window: any,
+    private errorHandler: ErrorHandler
+  ) {}
 
   /**
    * Configures the top offset used when scrolling to an anchor.
@@ -68,7 +73,7 @@ export class CustomViewportScroller implements ViewportScroller {
       if (this.window.CSS && this.window.CSS.escape) {
         anchor = this.window.CSS.escape(anchor);
       } else {
-        anchor = anchor.replace(/(\"|\'\ |:|\.|\[|\]|,|=)/g, '\\$1');
+        anchor = anchor.replace(/(\"|\'\ |:|\.|\[|\]|,|=)/g, "\\$1");
       }
       try {
         const elSelectedById = this.document.querySelector(`#${anchor}`);
@@ -90,7 +95,7 @@ export class CustomViewportScroller implements ViewportScroller {
   /**
    * Disables automatic scroll restoration provided by the browser.
    */
-  setHistoryScrollRestoration(scrollRestoration: 'auto' | 'manual'): void {
+  setHistoryScrollRestoration(scrollRestoration: "auto" | "manual"): void {
     if (this.supportScrollRestoration()) {
       const history = this.window.history;
       if (history && history.scrollRestoration) {

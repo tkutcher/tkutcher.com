@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ParallaxedBgComponent } from './parallaxed-bg.component';
+import { ParallaxedBgComponent } from "./parallaxed-bg.component";
 
-describe('ParallaxedBgComponent', () => {
+describe("ParallaxedBgComponent", () => {
   let component: ParallaxedBgComponent;
   let fixture: ComponentFixture<ParallaxedBgComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ParallaxedBgComponent ]
-    })
-    .compileComponents();
+      declarations: [ParallaxedBgComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('ParallaxedBgComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

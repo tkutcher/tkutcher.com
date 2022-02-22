@@ -1,17 +1,19 @@
-<div id="header"
-     [@headerAppearance]="appearanceState"
-     [style]="{height: HEADER_HEIGHT_ + 'px'}">
-
+<div
+  id="header"
+  [@headerAppearance]="appearanceState"
+  [style]="{ height: HEADER_HEIGHT_ + 'px' }"
+>
   <app-cmd-prompt>
     <nav class="nav-items" fxShow fxHide.lt-md="true">
-      <a *ngFor="let navItem of navItems_"
-         class="nav-item"
-         [routerLink]="navItem.routerLink"
-         (mouseenter)="onNavItemHover(navItem)"
-         (mouseleave)="onNavItemExit()"
-      >/{{navItem.display}}</a>
+      <a
+        *ngFor="let navItem of navItems"
+        class="nav-item"
+        [routerLink]="navItem.routerLink"
+        (mouseenter)="onNavItemHover(navItem)"
+        (mouseleave)="onNavItemExit()"
+        >/{{ navItem.display }}</a
+      >
     </nav>
-
 
     <div style="display: flex; justify-content: flex-end">
       <button mat-icon-button fxHide fxShow.lt-md="true" [matMenuTriggerFor]="navMenu">
@@ -19,12 +21,14 @@
       </button>
 
       <mat-menu #navMenu="matMenu">
-        <button mat-menu-item *ngFor="let navItem of navItems_" [routerLink]="navItem.routerLink">
-          <span>{{navItem.display}}</span>
+        <button
+          mat-menu-item
+          *ngFor="let navItem of navItems"
+          [routerLink]="navItem.routerLink"
+        >
+          <span>{{ navItem.display }}</span>
         </button>
       </mat-menu>
     </div>
-
   </app-cmd-prompt>
-
 </div>

@@ -1,3 +1,7 @@
-<div id="welcome-blurb" [@listAnimation]="welcomeParagraphs.length" [class.hidden]="!isLoaded">
-    <p *ngFor="let item of welcomeParagraphs; index as i" [innerHTML]="item"></p>
+<div
+  id="welcome-blurb"
+  [@listAnimation]="welcomeParagraphs.length"
+  [class.hidden]="!isLoaded"
+>
+  <p *ngFor="let item of welcomeParagraphs; index as i" [innerHTML]="item"></p>
 </div>

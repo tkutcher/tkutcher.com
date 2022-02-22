@@ -1,5 +1,5 @@
-import { Injectable } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Injectable } from "@angular/core";
+import { Meta, Title } from "@angular/platform-browser";
 
 interface IPage {
   title: string;
@@ -18,8 +18,9 @@ const baseKeywords = `
   Python,
   Personal Website`;
 
-const defaultIPage = {
-  title: 'tkutcher.com - Tim Kutcher\'s Personal Website | Software Engineer from Maryland',
+const defaultIPage: IPage = {
+  title:
+    "tkutcher.com - Tim Kutcher's Personal Website | Software Engineer from Maryland",
   description: `
     This is the personal website for Tim Kutcher. I am a software engineer from 
     Maryland who specializes in full-stack web development (primarily in Python and Angular). 
@@ -27,68 +28,63 @@ const defaultIPage = {
     My passions are sports, leadership, friends and family, beautiful code, and beautiful 
     code that writes beautiful code.
   `,
-  keywords: baseKeywords
+  keywords: baseKeywords,
 };
 
 const pageRoutes: Record<string, IPage> = {
-  '/': defaultIPage,
-  '/contact': {
-    title: 'tkutcher.com | Contact Me',
+  "/": defaultIPage,
+  "/contact": {
+    title: "tkutcher.com | Contact Me",
     description: `
       Contact me on social media, through GitHub or GitLab, or via an email to
       discuss any ideas for something I might be able to help build.
     `,
-    keywords: baseKeywords + ', Contact,'
+    keywords: baseKeywords + ", Contact,",
   },
-  '/projects': {
-    title: 'tkutcher.com | Projects',
+  "/projects": {
+    title: "tkutcher.com | Projects",
     description: `
       Learn about some of the software projects I have worked on and see some of my
       work.
     `,
-    keywords: baseKeywords + ', Contact,'
+    keywords: baseKeywords + ", Contact,",
   },
-  '/bio': {
-    title: 'tkutcher.com | Bio',
+  "/bio": {
+    title: "tkutcher.com | Bio",
     description: `
       A history of some of the things I've done.
     `,
-    keywords: baseKeywords + ', Biography,'
-  }
+    keywords: baseKeywords + ", Biography,",
+  },
 };
 
-
-const getIPage = (url) => {
-  let p = url.split('#')[0].split('?')[0];
-  let pathArray = p.split('/');
+const getIPage = (url: string) => {
+  let p = url.split("#")[0].split("?")[0];
+  let pathArray = p.split("/");
 
   while (pathArray.length > 0) {
-    p = pathArray.join('/');
-    p = p == '' ? '/' : p;
+    p = pathArray.join("/");
+    p = p == "" ? "/" : p;
     if (pageRoutes.hasOwnProperty(p)) {
-      return pageRoutes[p]
+      return pageRoutes[p];
     }
     pathArray = pathArray.slice(0, -1);
   }
   return defaultIPage;
 };
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class SeoService {
+  constructor(private title: Title, private meta: Meta) {}
 
-  constructor(
-    private title: Title,
-    private meta: Meta) { }
-
-  updateTitleForNewRoute(url) {
+  updateTitleForNewRoute(url: string) {
     const pg = getIPage(url);
     this.title.setTitle(pg.title);
-    this.meta.updateTag({name: 'description', content: pg.description});
+    this.meta.updateTag({ name: "description", content: pg.description });
     if (pg.keywords) {
-      this.meta.updateTag({name: 'keywords', content: pg.keywords});
+      this.meta.updateTag({ name: "keywords", content: pg.keywords });
     }
   }
 }

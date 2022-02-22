@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { CmdPromptComponent } from './cmd-prompt.component';
+import { CmdPromptComponent } from "./cmd-prompt.component";
 
-describe('CmdPromptComponent', () => {
+describe("CmdPromptComponent", () => {
   let component: CmdPromptComponent;
   let fixture: ComponentFixture<CmdPromptComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CmdPromptComponent ]
-    })
-    .compileComponents();
+      declarations: [CmdPromptComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('CmdPromptComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

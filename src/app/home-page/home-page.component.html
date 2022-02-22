@@ -1,45 +1,44 @@
 <div>
-  <h1 style="display: none">Welcome to tkutcher.com - Personal Website for Tim Kutcher</h1>
+  <h1 style="display: none">
+    Welcome to tkutcher.com - Personal Website for Tim Kutcher
+  </h1>
   <app-welcome-blurb></app-welcome-blurb>
 
   <div class="page-content-wrap">
-    <h2 wmAnimate="landing" speed="fast" aos="0.1">What I Do</h2>
+    <h2 wmAnimate="landing" speed="fast" [aos]="0.1">What I Do</h2>
     <section>
-      <div wmAnimate="landing" speed="fast" aos="1">
+      <div wmAnimate="landing" speed="fast" [aos]="1">
         <h3 id="software">Software</h3>
         <div>
           <p>
-            I primarily work full-stack web development and am most experienced with Python, and
-            TypeScript Angular frontends. I am also comfortable working with Java, XSLT,
-            Dart/Flutter mobile development, Docker, and more.
+            I primarily work full-stack web development and am most experienced with
+            Python, and TypeScript Angular frontends. I am also comfortable working with
+            Java, XSLT, Dart/Flutter mobile development, Docker, and more.
           </p>
-          <p>
-            Here are a few of the things I've done:
-          </p>
+          <p>Here are a few of the things I've done:</p>
         </div>
       </div>
       <app-software-projects-overview></app-software-projects-overview>
     </section>
-    <section style="padding-top: 20vh;">
-      <div wmAnimate="landing" speed="fast" aos="0.4">
+    <section style="padding-top: 20vh">
+      <div wmAnimate="landing" speed="fast" [aos]="0.4">
         <h3 id="athletics">Athletics</h3>
         <div>
           <p>
-            Athletics, especially baseball, have always been a major aspect of my life. I was fortunate to
-            play college baseball at Johns Hopkins and had a great four years. My senior year we even
-            made it to the College World Series. I am thankful for all of the great memories, teammates,
-            coaches, and the support of my family.
+            Athletics, especially baseball, have always been a major aspect of my life.
+            I was fortunate to play college baseball at Johns Hopkins and had a great
+            four years. My senior year we even made it to the College World Series. I am
+            thankful for all of the great memories, teammates, coaches, and the support
+            of my family.
           </p>
-          <p>
-            Here are a few of my luckier moments:
-          </p>
+          <p>Here are a few of my luckier moments:</p>
         </div>
       </div>
       <app-athletics-overview></app-athletics-overview>
     </section>
 
     <div style="margin-top: 100px">
-      <h2 wmAnimate="landing" speed="fast" aos="0.1">Where You Can Find Me</h2>
+      <h2 wmAnimate="landing" speed="fast" [aos]="0.1">Where You Can Find Me</h2>
       <app-contact-grid></app-contact-grid>
     </div>
   </div>

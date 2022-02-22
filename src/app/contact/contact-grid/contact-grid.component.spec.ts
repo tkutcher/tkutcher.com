@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ContactGridComponent } from './contact-grid.component';
+import { ContactGridComponent } from "./contact-grid.component";
 
-describe('ContactGridComponent', () => {
+describe("ContactGridComponent", () => {
   let component: ContactGridComponent;
   let fixture: ComponentFixture<ContactGridComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ContactGridComponent ]
-    })
-    .compileComponents();
+      declarations: [ContactGridComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('ContactGridComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

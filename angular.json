@@ -29,13 +29,9 @@
               "src/sitemap.xml",
               "src/robots.txt"
             ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "styles": ["src/styles/index.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             },
             "scripts": []
           },
@@ -93,17 +89,10 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles/index.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles/index.scss"],
             "stylePreprocessorOptions": {
-              "includePaths": [
-                "src/styles"
-              ]
+              "includePaths": ["src/styles"]
             },
             "scripts": []
           }
@@ -112,7 +101,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/tkutcher-dot-com/server",
-            "main": "src/main.server.ts",
+            "main": "server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
@@ -128,12 +117,50 @@
               "optimization": true
             }
           }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "tkutcher-dot-com:build:development",
+              "serverTarget": "tkutcher-dot-com:server:development"
+            },
+            "production": {
+              "browserTarget": "tkutcher-dot-com:build:production",
+              "serverTarget": "tkutcher-dot-com:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": ["/", "/bio", "/projects", "/contact"]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "tkutcher-dot-com:build:production",
+              "serverTarget": "tkutcher-dot-com:server:production"
+            },
+            "development": {
+              "browserTarget": "tkutcher-dot-com:build:development",
+              "serverTarget": "tkutcher-dot-com:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+          }
         }
       }
     }
   },
   "defaultProject": "tkutcher-dot-com",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

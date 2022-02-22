@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { CmdPromptService } from './cmd-prompt.service';
+import { CmdPromptService } from "./cmd-prompt.service";
 
-describe('CmdPromptService', () => {
+describe("CmdPromptService", () => {
   let service: CmdPromptService;
 
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('CmdPromptService', () => {
     service = TestBed.inject(CmdPromptService);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

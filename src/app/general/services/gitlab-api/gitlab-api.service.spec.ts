@@ -1,8 +1,8 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed } from "@angular/core/testing";
 
-import { GitlabApiService } from './gitlab-api.service';
+import { GitlabApiService } from "./gitlab-api.service";
 
-describe('GitlabApiService', () => {
+describe("GitlabApiService", () => {
   let service: GitlabApiService;
 
   beforeEach(() => {
@@ -10,7 +10,7 @@ describe('GitlabApiService', () => {
     service = TestBed.inject(GitlabApiService);
   });
 
-  it('should be created', () => {
+  it("should be created", () => {
     expect(service).toBeTruthy();
   });
 });

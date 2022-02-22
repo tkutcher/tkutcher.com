@@ -1,8 +1,6 @@
-
-export const BG_TOP = '#262C38';
-export const BG_MID = '#2A303C';
-export const BG_BOT = '#2E3440';
-
+export const BG_TOP = "#262C38";
+export const BG_MID = "#2A303C";
+export const BG_BOT = "#2E3440";
 
 export const matElevationZ8 = `
   0px 5px 5px -3px rgba(0, 0, 0, 0.2), 

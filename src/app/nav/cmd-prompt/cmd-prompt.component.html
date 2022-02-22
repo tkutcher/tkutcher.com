@@ -9,11 +9,13 @@
           <span class="prompt-username">you</span>
           <span class="prompt-domain">@tkutcher.com</span>
           <span style="color: white">:</span>
-          <span class="prompt-path"><b>{{promptPath | cmdPromptPathTruncate}}</b></span>
+          <span class="prompt-path"
+            ><b>{{ promptPath | cmdPromptPathTruncate }}</b></span
+          >
         </a>
       </div>
       <div class="literal-prompt">
-        <span>{{promptText}}</span>
+        <span>{{ promptText }}</span>
         <div class="cursor"></div>
       </div>
     </div>
@@ -25,11 +27,16 @@
     <div class="prompt-displays">
       <div class="hexed-prompt">
         <span
-            [class.prompt-status-ok]="promptStatus.kind === 'ok'"
-            [class.prompt-status-bad]="promptStatus.kind === 'bad'"
+          [class.prompt-status-ok]="promptStatus.kind === 'ok'"
+          [class.prompt-status-bad]="promptStatus.kind === 'bad'"
         >
-          {{ promptStatus.kind === 'ok' ? '&#10004;' :
-              promptStatus.kind === 'bad' ? '&#10007;' : ''}}
+          {{
+            promptStatus.kind === "ok"
+              ? "&#10004;"
+              : promptStatus.kind === "bad"
+              ? "&#10007;"
+              : ""
+          }}
           {{ promptStatus.code }}
           {{ promptStatus.name }}
         </span>

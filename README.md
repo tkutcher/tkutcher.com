@@ -17,6 +17,7 @@ Source code for https://tkutcher.com
 ---
 
 ### Development
+
 - `ng serve` for development server
 - `ng build --prod` for the standard build
 - `ng run tkutcher-dot-com:server && npx angular-prerender` to do the SSR

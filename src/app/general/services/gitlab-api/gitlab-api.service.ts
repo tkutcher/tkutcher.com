@@ -1,16 +1,13 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class GitlabApiService {
+  constructor(private http: HttpClient) {}
 
-  constructor(
-    private http: HttpClient
-  ) { }
-
-  getProject(projectId) {
+  getProject(projectId: string | number) {
     return this.http.get(`https://gitlab.com/api/v4/projects/${projectId}`);
   }
 }

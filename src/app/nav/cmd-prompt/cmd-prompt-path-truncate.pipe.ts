@@ -1,12 +1,10 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 @Pipe({
-  name: 'cmdPromptPathTruncate'
+  name: "cmdPromptPathTruncate",
 })
 export class CmdPromptPathTruncatePipe implements PipeTransform {
-
   transform(url: string): unknown {
-    return url ? url.substr(0, 14) : '';
+    return url ? url.substr(0, 14) : "";
   }
-
 }

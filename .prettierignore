@@ -1,0 +1,55 @@
+/.angular/cache
+## Project-Specific
+__archive
+
+## Environment
+.env
+
+## Artifcats
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+## Libraries
+/node_modules
+
+
+## IDE's
+# Include PyCharm run configurations, dictionaries, and copyright setup.
+.idea/*
+!.idea/*.iml
+!.idea/runConfigurations
+!.idea/dictionaries
+!.idea/copyright
+
+# VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Other
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+## Misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+
+## System Files
+.DS_Store
+Thumbs.db

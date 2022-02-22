@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ProfileLinks } from './icon-links.component';
+import { ProfileLinks } from "./icon-links.component";
 
-describe('IconLinksComponent', () => {
+describe("IconLinksComponent", () => {
   let component: ProfileLinks;
   let fixture: ComponentFixture<ProfileLinks>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileLinks ]
-    })
-    .compileComponents();
+      declarations: [ProfileLinks],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('IconLinksComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
