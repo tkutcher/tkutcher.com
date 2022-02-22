@@ -18,9 +18,8 @@ deploy:
   stage: deploy
   needs:
     - build
-  only:
-    refs:
-      - master
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
   before_script:
     - pip install awscli
   script:
