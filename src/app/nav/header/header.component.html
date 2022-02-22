@@ -5,14 +5,24 @@
 >
   <app-cmd-prompt>
     <nav class="nav-items" fxShow fxHide.lt-md="true">
-      <a
-        *ngFor="let navItem of navItems"
-        class="nav-item"
-        [routerLink]="navItem.routerLink"
-        (mouseenter)="onNavItemHover(navItem)"
-        (mouseleave)="onNavItemExit()"
-        >/{{ navItem.display }}</a
-      >
+      <ng-container *ngFor="let navItem of navItems">
+        <a
+          *ngIf="navItem.routerLink"
+          [routerLink]="navItem.routerLink"
+          class="nav-item"
+          (mouseenter)="onNavItemHover(navItem)"
+          (mouseleave)="onNavItemExit()"
+          >/{{ navItem.display }}</a
+        >
+        <a
+          *ngIf="navItem.href"
+          [href]="navItem.href"
+          class="nav-item"
+          (mouseenter)="onNavItemHover(navItem)"
+          (mouseleave)="onNavItemExit()"
+          >/{{ navItem.display }}</a
+        >
+      </ng-container>
     </nav>
 
     <div style="display: flex; justify-content: flex-end">
@@ -21,15 +31,15 @@
       </button>
 
       <mat-menu #navMenu="matMenu">
-        <ng-container
-          mat-menu-item
-          *ngFor="let navItem of navItems"
-          [routerLink]="navItem.routerLink"
-        >
-          <button *ngIf="navItem.routerLink" [routerLink]="navItem.routerLink">
+        <ng-container *ngFor="let navItem of navItems">
+          <button
+            *ngIf="navItem.routerLink"
+            [routerLink]="navItem.routerLink"
+            mat-menu-item
+          >
             <span>{{ navItem.display }}</span>
           </button>
-          <a *ngIf="navItem.href" [href]="navItem.href">
+          <a *ngIf="navItem.href" [href]="navItem.href" mat-menu-item>
             <span>{{ navItem.display }}</span>
           </a>
         </ng-container>

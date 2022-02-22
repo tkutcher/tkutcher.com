@@ -16,7 +16,7 @@ export const navItems: INavItem[] = [
   { display: "bio", routerLink: "/bio" },
   { display: "projects", routerLink: "/projects" },
   { display: "contact", routerLink: "/contact" },
-  {display: "blog", href: "https://medium.com/@tkutcher"}
+  { display: "blog", href: "https://medium.com/@tkutcher" },
 ];
 
 export const profileLinks: IProfileLink[] = [
