@@ -1,5 +1,5 @@
 npm install
 npm link @angular/cli
-ng build --prod
+ng build --configuration=production
 ng run tkutcher-dot-com:server
-npx angular-prerender
+npm run prerender
