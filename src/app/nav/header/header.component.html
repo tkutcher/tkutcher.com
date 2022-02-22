@@ -21,13 +21,18 @@
       </button>
 
       <mat-menu #navMenu="matMenu">
-        <button
+        <ng-container
           mat-menu-item
           *ngFor="let navItem of navItems"
           [routerLink]="navItem.routerLink"
         >
-          <span>{{ navItem.display }}</span>
-        </button>
+          <button *ngIf="navItem.routerLink" [routerLink]="navItem.routerLink">
+            <span>{{ navItem.display }}</span>
+          </button>
+          <a *ngIf="navItem.href" [href]="navItem.href">
+            <span>{{ navItem.display }}</span>
+          </a>
+        </ng-container>
       </mat-menu>
     </div>
   </app-cmd-prompt>

@@ -1,6 +1,7 @@
 export interface INavItem {
   display: string;
-  routerLink: string;
+  routerLink?: string;
+  href?: string;
 }
 
 export interface IProfileLink {
@@ -15,6 +16,7 @@ export const navItems: INavItem[] = [
   { display: "bio", routerLink: "/bio" },
   { display: "projects", routerLink: "/projects" },
   { display: "contact", routerLink: "/contact" },
+  {display: "blog", href: "https://medium.com/@tkutcher"}
 ];
 
 export const profileLinks: IProfileLink[] = [
@@ -23,6 +25,12 @@ export const profileLinks: IProfileLink[] = [
     faName: "fab fa-linkedin",
     handle: "Tim Kutcher",
     link: "https://www.linkedin.com/in/tim-kutcher-a7831416a/",
+  },
+  {
+    name: "medium",
+    faName: "fab fa-medium",
+    handle: "tkutcher",
+    link: "https://medium.com/@tkutcher",
   },
   {
     name: "facebook",

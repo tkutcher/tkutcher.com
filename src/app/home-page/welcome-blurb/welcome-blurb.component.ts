@@ -37,7 +37,7 @@ export class WelcomeBlurbComponent implements OnInit, AfterViewInit {
     "My name is Tim Kutcher.",
     "I'm a software engineer from Maryland, high school baseball & volleyball coach, and former college athlete.",
     "Ravens & Bohs & Crabs & O's.",
-    "My passions are sports, leadership, family & friends, beautiful code, and beautiful code" +
+    "I am passionate about leadership, teaching & enabling problem solvers, beautiful code, and beautiful code" +
       " that writes beautiful code.",
   ];
 

@@ -46,7 +46,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   };
 
   onNavItemHover = (item: INavItem) => {
-    this.cmdPromptService.writeToPrompt("cd " + item.routerLink, {
+    this.cmdPromptService.writeToPrompt("cd /" + item.display, {
       clearAfter: false,
     });
   };
