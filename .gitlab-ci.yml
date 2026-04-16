@@ -7,5 +7,5 @@ deploy:
   script:
     - az storage blob upload-batch --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --destination '$web' --source src
   only:
-    - v2-rewrite # TEMP!
+    - main
 
