@@ -5,7 +5,7 @@ deploy:
   stage: deploy
   image: mcr.microsoft.com/azure-cli
   script:
-    - az storage blob upload-batch --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --destination '$web' --source src
+    - az storage blob upload-batch --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --destination '$web' --source src --overwrite
   only:
     - main
 
