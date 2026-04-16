@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /bio
-Sitemap: https://tkutcher.com/sitemap.xml
