@@ -4,9 +4,10 @@ stages:
 
 deploy:
   stage: deploy
-  image: mcr.microsoft.com/azure-cli:azurelinux3.0
+  image: mcr.microsoft.com/azure-cli
   script:
-    - ./scripts/az-storage-replace-dir.sh -n tkutchercomdevwa01 -k "$AZURE_STORAGE_ACCOUNT_KEY" -s src -d ""
+    - PATH=$PATH:/usr/local/bin
+    - az-storage-replace-dir -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
   only:
     - main
 
