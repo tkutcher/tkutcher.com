@@ -1,4 +1,3 @@
-
 stages:
   - deploy
 
@@ -6,7 +5,7 @@ deploy:
   stage: deploy
   image: mcr.microsoft.com/azure-cli
   script:
-    - az-storage-replace-dir -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
+    - az storage blob upload-batch --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --destination '$web' --source src --overwrite
   only:
     - main
 
