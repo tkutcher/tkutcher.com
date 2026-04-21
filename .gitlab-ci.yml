@@ -1,3 +1,7 @@
+
+# Using work buildtools (with CTO approval 😬) to get az-storage-replace-dir
+image: registry.gitlab.com/dicorp/v2/techsec/anvilor/buildtools/py3.13-node22:latest
+
 stages:
   - deploy
 
@@ -5,7 +9,7 @@ deploy:
   stage: deploy
   image: mcr.microsoft.com/azure-cli
   script:
-    - az storage blob upload-batch --connection-string "$AZURE_STORAGE_CONNECTION_STRING" --destination '$web' --source src --overwrite
+    - az-storage-replace-dir -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
   only:
     - main
 
