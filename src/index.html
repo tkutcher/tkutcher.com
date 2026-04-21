@@ -3,56 +3,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coming Soon</title>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Space Grotesk', sans-serif;
-      background-color: #f9f9f9;
-      color: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .container {
-      max-width: 600px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    .logo {
-      font-size: 2rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
-      color: #000;
-    }
-  </style>
+  <title>Tim Kutcher</title>
+  <meta
+    name="description"
+    content="Tim Kutcher personal website. Under construction with links to the archived site and current profiles."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./brand-spec.css" />
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="logo">timkutcher.com</div>
-    <h1>Coming Soon</h1>
-    <p>This site is under construction. Check back soon.</p>
-    <p>Previous site at <a href="https://v1-archive.tkutcher.com">v1-archive.tkutcher.com</a></p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="page-shell">
+    <main id="main-content" class="landing" tabindex="-1">
+      <section class="hero-stage" aria-labelledby="coming-soon-title">
+        <div class="hero-head">
+          <img
+            class="site-logo"
+            src="./assets/tk-logo--black.png"
+            alt="Tim Kutcher logo"
+            width="128"
+            height="128"
+          />
+          <p class="site-name type-label-large">tkutcher.com</p>
+        </div>
+        <div class="construction-card">
+          <h1 id="coming-soon-title" class="type-display-large landing-title">
+            Under construction.
+          </h1>
+          <p class="type-body-large landing-copy">Coming soon.</p>
+        </div>
+      </section>
+
+      <section class="link-stage">
+        <a class="archive-callout" href="https://v1-archive.tkutcher.com" target="_blank" rel="noopener noreferrer">
+          <span class="archive-callout__text">v1 archive</span>
+          <span class="archive-callout__arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden">, opens in a new tab</span>
+        </a>
+
+        <nav aria-label="Social links">
+          <ul class="social-grid" role="list">
+            <li><a href="https://www.linkedin.com/in/tim-kutcher-a7831416a/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span class="social-handle">@tkutcher</span><span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitLab</span><span class="social-handle">@tkutcher</span><span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://medium.com/@tkutcher" target="_blank" rel="noopener noreferrer">Medium<span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://stackoverflow.com/users/9970629/tplusk" target="_blank" rel="noopener noreferrer">Stack Overflow<span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer"><span>X / Twitter</span><span class="social-handle">@tkutcher_</span><span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="social-handle">@tkutcher_</span><span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://www.youtube.com/channel/UCHq9PYerV7OnYbJw5EHKQlA" target="_blank" rel="noopener noreferrer">YouTube<span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://open.spotify.com/user/224qqcv3bwopg7srmr73b7duq" target="_blank" rel="noopener noreferrer">Spotify<span class="visually-hidden">, opens in a new tab</span></a></li>
+            <li><a href="https://www.facebook.com/tim.kutcher.3" target="_blank" rel="noopener noreferrer">Facebook<span class="visually-hidden">, opens in a new tab</span></a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
   </div>
 </body>
 </html>

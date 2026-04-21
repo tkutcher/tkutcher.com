@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tim Kutcher</title>
+  <meta
+    name="description"
+    content="A minimal rebrand for Tim Kutcher's personal website, built with static HTML and vanilla JavaScript."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header" data-reveal style="--delay: 0ms;">
+      <a class="brand" href="./index.html" aria-label="Tim Kutcher home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-copy">
+          <span class="brand-name">tk</span>
+          <span class="brand-path">tim kutcher</span>
+        </span>
+      </a>
+      <a
+        class="archive-link"
+        href="https://v1-archive.tkutcher.com"
+        target="_blank"
+        rel="noreferrer"
+      >
+        v1 archive
+      </a>
+    </header>
+
+    <main class="hero">
+      <section class="hero-copy" data-reveal style="--delay: 120ms;">
+        <p class="eyebrow">personal site / rebrand / static html</p>
+        <h1>
+          A quieter home for
+          <span
+            class="rotating-word"
+            data-rotating-word
+            data-words="software,writing,projects,experiments"
+          >
+            software
+          </span>
+          .
+        </h1>
+        <p class="lede">
+          I am rebuilding this site from scratch with a simpler visual language,
+          calmer typography, and a little room to grow. Version 1 stays online
+          while this new foundation takes shape.
+        </p>
+
+        <div class="stack-note">
+          <span class="stack-note__label">build stack</span>
+          <span class="stack-note__value">HTML / CSS / Vanilla JS</span>
+        </div>
+
+        <div class="hero-actions">
+          <a
+            class="button button--primary"
+            href="https://v1-archive.tkutcher.com"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Browse the archive
+          </a>
+          <a class="button button--ghost" href="#system-foundation">
+            See the foundation
+          </a>
+        </div>
+      </section>
+
+      <aside
+        class="system-panel"
+        id="system-foundation"
+        data-reveal
+        style="--delay: 220ms;"
+      >
+        <div class="system-panel__header">
+          <div>
+            <p class="system-label">brand study / v0</p>
+            <p class="system-title">Initial aesthetic direction</p>
+          </div>
+          <p class="system-code">~/tkutcher.com/rebrand</p>
+        </div>
+
+        <div class="monogram-block">
+          <div class="prompt-mark" aria-hidden="true">
+            <span class="prompt-mark__hook"></span>
+            <span class="prompt-mark__copy">tk</span>
+          </div>
+          <div class="monogram" aria-hidden="true">
+            <span class="monogram__t">t</span>
+            <span class="monogram__k">k</span>
+          </div>
+          <p class="monogram-caption">
+            Prompt-inspired mark and a monogram sketch, kept loose until the
+            logo settles.
+          </p>
+        </div>
+
+        <div class="token-list">
+          <div class="token-row">
+            <span class="token-key">Primary</span>
+            <span class="token-swatch token-swatch--primary" aria-hidden="true"></span>
+            <span class="token-value">#5E81AC</span>
+          </div>
+          <div class="token-row">
+            <span class="token-key">Primary Dark</span>
+            <span class="token-swatch token-swatch--dark" aria-hidden="true"></span>
+            <span class="token-value">#445568</span>
+          </div>
+          <div class="token-row">
+            <span class="token-key">Display</span>
+            <span class="token-value token-value--wide">Space Grotesk / 57px</span>
+          </div>
+          <div class="token-row">
+            <span class="token-key">Code</span>
+            <span class="token-value token-value--wide">JetBrains Mono</span>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer" data-reveal style="--delay: 320ms;">
+      <p>Version 1 stays live while this one becomes something sharper.</p>
+      <a href="https://v1-archive.tkutcher.com" target="_blank" rel="noreferrer">
+        Open the archive
+      </a>
+    </footer>
+  </div>
+</body>
+</html>
