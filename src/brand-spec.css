@@ -1,18 +1,19 @@
 :root {
-  --color-paper: #f5f3ee;
-  --color-paper-bright: #fbfaf8;
-  --color-ink: #111111;
-  --color-ink-muted: #2f3944;
-  --color-ink-subtle: #4a5662;
-  --color-primary: #5e81ac;
-  --color-primary-dark: #445568;
-  --color-primary-deep: #334152;
-  --color-focus: #1d4f91;
-  --color-line: rgba(68, 85, 104, 0.24);
-  --color-line-strong: rgba(68, 85, 104, 0.4);
-  --color-surface: rgba(255, 255, 255, 0.78);
-  --color-surface-strong: rgba(255, 255, 255, 0.92);
-  --shadow-soft: 0 24px 64px rgba(68, 85, 104, 0.12);
+  --color-paper: #0c101b;
+  --color-paper-bright: #151a2a;
+  --color-ink: #f3f6ff;
+  --color-ink-muted: #c4cad9;
+  --color-ink-subtle: #8d96ad;
+  --color-primary: #6f8fbf;
+  --color-primary-dark: #354665;
+  --color-primary-deep: #182137;
+  --color-accent: #9889ff;
+  --color-focus: #9fb8e8;
+  --color-line: rgba(111, 143, 191, 0.24);
+  --color-line-strong: rgba(152, 137, 255, 0.42);
+  --color-surface: rgba(18, 23, 38, 0.8);
+  --color-surface-strong: rgba(24, 30, 49, 0.94);
+  --shadow-soft: 0 24px 64px rgba(0, 0, 0, 0.32);
   --font-sans: "Space Grotesk", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
   --type-display-large: 3.5625rem;
@@ -30,7 +31,7 @@
   --type-body-large: 1rem;
   --type-body-medium: 0.875rem;
   --type-body-small: 0.75rem;
-  --radius-card: 1.5rem;
+  --radius-card: 0.5rem;
   --radius-pill: 999px;
 }
 
@@ -50,8 +51,7 @@ body {
   font-family: var(--font-sans);
   color: var(--color-ink);
   background:
-    radial-gradient(circle at top left, rgba(94, 129, 172, 0.16), transparent 24%),
-    radial-gradient(circle at 85% 12%, rgba(68, 85, 104, 0.1), transparent 20%),
+    linear-gradient(135deg, rgba(152, 137, 255, 0.1) 0 1px, transparent 1px 28%),
     linear-gradient(180deg, var(--color-paper-bright) 0%, var(--color-paper) 100%);
 }
 
@@ -60,10 +60,11 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(rgba(68, 85, 104, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(68, 85, 104, 0.04) 1px, transparent 1px);
-  background-size: 4.5rem 4.5rem;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.72), transparent 85%);
+    linear-gradient(rgba(111, 143, 191, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(111, 143, 191, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, transparent 0 48%, rgba(152, 137, 255, 0.06) 48% 52%, transparent 52% 100%);
+  background-size: 4.5rem 4.5rem, 4.5rem 4.5rem, 9rem 9rem;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.88), transparent 92%);
   pointer-events: none;
 }
 
@@ -107,7 +108,7 @@ img {
   left: 0.75rem;
   z-index: 20;
   padding: 0.85rem 1rem;
-  border-radius: 0.75rem;
+  border-radius: var(--radius-card);
   background: var(--color-primary-deep);
   color: #ffffff;
   font-size: var(--type-title-small);
@@ -123,21 +124,21 @@ img {
 .type-display-large {
   font-size: clamp(3rem, 8vw, var(--type-display-large));
   line-height: 0.94;
-  letter-spacing: -0.08em;
+  letter-spacing: 0;
   font-weight: 400;
 }
 
 .type-headline-small {
   font-size: var(--type-headline-small);
   line-height: 1.1;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   font-weight: 400;
 }
 
 .type-title-large {
   font-size: var(--type-title-large);
   line-height: 1.1;
-  letter-spacing: -0.05em;
+  letter-spacing: 0;
   font-weight: 400;
 }
 
@@ -162,7 +163,7 @@ img {
 .type-label-large {
   font-size: var(--type-label-large);
   line-height: 1.4;
-  letter-spacing: 0.18em;
+  letter-spacing: 0;
   text-transform: uppercase;
   font-weight: 500;
 }
@@ -170,7 +171,7 @@ img {
 .type-label-medium {
   font-size: var(--type-label-medium);
   line-height: 1.4;
-  letter-spacing: 0.12em;
+  letter-spacing: 0;
   text-transform: uppercase;
   font-weight: 500;
 }
