@@ -4,65 +4,171 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tim Kutcher</title>
-  <meta
-    name="description"
-    content="Tim Kutcher personal website. Under construction with links to the archived site and current profiles."
-  />
+  <meta name="description" content="Tim Kutcher — software engineer, solutions architect, athlete, coach, and maker of things for the web." />
+  <meta name="theme-color" content="#0c101b" />
+  <link rel="icon" href="./assets/tk-logo--black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="./brand-spec.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./brand.css" />
   <link rel="stylesheet" href="./styles.css" />
+  <script src="./main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
-  <div class="page-shell">
-    <main id="main-content" class="landing" tabindex="-1">
-      <section class="hero-stage" aria-labelledby="coming-soon-title">
-        <div class="hero-head">
-          <img
-            class="site-logo"
-            src="./assets/tk-logo--black.png"
-            alt="Tim Kutcher logo"
-            width="128"
-            height="128"
-          />
-          <p class="site-name type-label-large">tkutcher.com</p>
-        </div>
-        <div class="construction-card">
-          <h1 id="coming-soon-title" class="type-display-large landing-title">
-            Under construction.
-          </h1>
-          <p class="type-body-large landing-copy">Coming soon.</p>
-        </div>
-      </section>
 
-      <section class="link-stage">
-        <a class="archive-callout" href="https://v1-archive.tkutcher.com" target="_blank" rel="noopener noreferrer">
-          <span class="archive-callout__text">v1 archive</span>
-          <span class="archive-callout__arrow" aria-hidden="true">↗</span>
-          <span class="visually-hidden">, opens in a new tab</span>
-        </a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-mark" href="./index.html" aria-label="Tim Kutcher — home">
+        <img src="./assets/tk-logo--black.png" alt="" width="44" height="44" />
+        <span>Tim Kutcher</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Toggle navigation</span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#design">Design</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#elsewhere">Links</a>
+        <a class="nav-archive" href="https://v1-archive.tkutcher.com" target="_blank" rel="noopener noreferrer">Old site ↗</a>
+      </nav>
+    </div>
+  </header>
 
-        <nav aria-label="Social links">
-          <ul class="social-grid" role="list">
-            <li><a href="https://www.linkedin.com/in/tim-kutcher-a7831416a/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span class="social-handle">@tkutcher</span><span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitLab</span><span class="social-handle">@tkutcher</span><span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://medium.com/@tkutcher" target="_blank" rel="noopener noreferrer">Medium<span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://stackoverflow.com/users/9970629/tplusk" target="_blank" rel="noopener noreferrer">Stack Overflow<span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer"><span>X / Twitter</span><span class="social-handle">@tkutcher_</span><span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><span class="social-handle">@tkutcher_</span><span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://www.youtube.com/channel/UCHq9PYerV7OnYbJw5EHKQlA" target="_blank" rel="noopener noreferrer">YouTube<span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://open.spotify.com/user/224qqcv3bwopg7srmr73b7duq" target="_blank" rel="noopener noreferrer">Spotify<span class="visually-hidden">, opens in a new tab</span></a></li>
-            <li><a href="https://www.facebook.com/tim.kutcher.3" target="_blank" rel="noopener noreferrer">Facebook<span class="visually-hidden">, opens in a new tab</span></a></li>
-          </ul>
+  <main id="main-content" tabindex="-1">
+    <section class="icon-hero" aria-labelledby="hero-title">
+      <div class="icon-hero__mark">
+        <img src="./assets/tk-logo--black.png" alt="TK monogram" width="440" height="440" />
+      </div>
+      <div class="icon-hero__copy">
+        <h1 class="icon-hero__greeting" id="hero-title">Hi — I’m Tim.</h1>
+        <p class="icon-hero__tagline">Jack of all trades, master of some.</p>
+        <p class="icon-hero__about">I’m a software engineer &amp; solutions architect for the web, athlete &amp; athletics coach, and am working to use those passions to send some positive energy out into the world.</p>
+        <nav class="hero-socials" aria-label="Main social profiles">
+          <a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitHub</span><strong>@tkutcher</strong></a>
+          <a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer"><span>GitLab</span><strong>@tkutcher</strong></a>
+          <a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer"><span>X</span><strong>@tkutcher_</strong></a>
+          <a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer"><span>Instagram</span><strong>@tkutcher_</strong></a>
         </nav>
-      </section>
-    </main>
-  </div>
+      </div>
+    </section>
+
+    <section class="work-section portfolio-section" id="design" aria-labelledby="design-title">
+      <div class="collection-heading">
+        <p class="collection-heading__label">Design portfolio</p>
+        <div>
+          <h2 id="design-title">Some things I’ve designed.</h2>
+          <p>Mostly a place to show the work and remember some of the thought that went into it.</p>
+        </div>
+      </div>
+
+      <div class="project-grid design-grid">
+        <article class="project-card project-card--wedding">
+          <a class="project-card__media" href="./work/wedding/" aria-label="Read about the Camila and Tim wedding design">
+            <img src="./assets/portfolio/wedding/rsvp-insert.png" alt="Colorful bilingual Camila and Tim wedding RSVP insert design" />
+            <span class="project-card__open" aria-hidden="true">Read the notes ↗</span>
+          </a>
+          <div class="project-card__body">
+            <div class="project-card__meta"><span>Print + web + experience</span><span>2025</span></div>
+            <h3><a href="./work/wedding/">Designing our wedding</a></h3>
+            <p>Invitations, a bilingual visual system, the wedding website, table pieces, and a few digital tools that connected everything.</p>
+            <a class="project-note-link" href="./work/wedding/">See the design and the thinking →</a>
+          </div>
+        </article>
+
+        <article class="project-card project-card--jcvb">
+          <a class="project-card__media" href="./work/jc-volleyball/" aria-label="Read about the John Carroll Volleyball identity">
+            <span class="jcvb-thumb" aria-hidden="true">
+              <span><img src="./assets/portfolio/jcvb/jcvb-logo.png" alt="" /></span>
+              <span><img src="./assets/portfolio/jcvb/jcvb-logo-on-light.png" alt="" /></span>
+              <span><img src="./assets/portfolio/jcvb/jcvb-logo-on-gold.png" alt="" /></span>
+            </span>
+            <span class="project-card__open" aria-hidden="true">Read the notes ↗</span>
+          </a>
+          <div class="project-card__body">
+            <div class="project-card__meta"><span>Logo + identity</span><span>JC Volleyball</span></div>
+            <h3><a href="./work/jc-volleyball/">John Carroll Volleyball</a></h3>
+            <p>Marks I designed for the volleyball program I coach, keeping with the school athletics brand and font.</p>
+            <a class="project-note-link" href="./work/jc-volleyball/">See the marks →</a>
+          </div>
+        </article>
+
+        <article class="project-card project-card--terminal">
+          <a class="project-card__media archive-thumbnail" href="./work/tkutcher-v1/" aria-label="Read about the original terminal-inspired tkutcher.com design">
+            <img src="./assets/portfolio/tkutcher-v1/v1-home.jpg" alt="Screenshot of the original terminal-inspired tkutcher.com homepage" />
+            <span class="project-card__open" aria-hidden="true">Read the notes ↗</span>
+          </a>
+          <div class="project-card__body">
+            <div class="project-card__meta"><span>Web design + build</span><span>v1</span></div>
+            <h3><a href="./work/tkutcher-v1/">The original tkutcher.com</a></h3>
+            <p>Inspired by the terminal I used every day, with a startup sequence and small 200/404 status-code easter eggs.</p>
+            <a class="project-note-link" href="./work/tkutcher-v1/">A quick look back →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="solutions-section" id="solutions" aria-labelledby="solutions-title">
+      <div class="collection-heading">
+        <p class="collection-heading__label">Solutions</p>
+        <div>
+          <h2 id="solutions-title">Software, companies, and experiments.</h2>
+          <p>A mix of current work and older projects that still say something about the kinds of problems I like.</p>
+        </div>
+      </div>
+
+      <div class="build-grid">
+        <article class="build-card build-card--anvilor">
+          <div class="build-card__top"><span>Current focus</span><span>Technology R&amp;D</span></div>
+          <img src="./assets/portfolio/anvilor/anvilor-wordmark.png" alt="Anvilor" />
+          <p>A project I work on at DICORP for smarter forms, connected workflows, and useful tools for community and philanthropic work.</p>
+          <a href="./work/anvilor/">What I’m working on →</a>
+        </article>
+
+        <article class="build-card build-card--company">
+          <div class="build-card__top"><span>Company work</span><span>Web + software</span></div>
+          <div class="build-card__initials" aria-hidden="true">DI</div>
+          <h3>DICORP &amp; Digital Innovation</h3>
+          <p>My day-to-day home for software engineering, solution architecture, R&amp;D, and work across healthcare, public safety, and philanthropic initiatives.</p>
+          <div class="build-card__links"><a href="https://dicorp.com" target="_blank" rel="noopener noreferrer">DICORP ↗</a><a href="https://www.dicorp.com/about/company/corporate" target="_blank" rel="noopener noreferrer">Digital Innovation ↗</a></div>
+        </article>
+
+        <article class="build-card build-card--code">
+          <div class="build-card__top"><span>Open source</span><span>Java</span></div>
+          <div class="code-prompt" aria-hidden="true"><span>$</span> jgrade test</div>
+          <h3>JGrade</h3>
+          <p>A package I built while teaching Data Structures at Johns Hopkins to add grading strategies, Checkstyle grading, and other tools to Gradescope autograders.</p>
+          <a href="https://github.com/tkutcher/jgrade" target="_blank" rel="noopener noreferrer">View JGrade on GitHub ↗</a>
+        </article>
+
+        <article class="build-card build-card--code">
+          <div class="build-card__top"><span>Open source</span><span>Python</span></div>
+          <div class="code-prompt" aria-hidden="true"><span>&gt;&gt;&gt;</span> import quickbase_client</div>
+          <h3>QuickBase Client</h3>
+          <p>A Python package built around a “code that writes code” idea, providing a higher-level way to work with the Quickbase API.</p>
+          <a href="https://github.com/tkutcher/quickbase-client" target="_blank" rel="noopener noreferrer">View the repository ↗</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="elsewhere">
+    <div class="site-footer__lead site-footer__lead--simple"><p>You can also find me around the internet.</p></div>
+    <nav class="social-links social-links--simple" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/tim-kutcher-a7831416a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer">GitLab ↗</a>
+      <a href="https://medium.com/@tkutcher" target="_blank" rel="noopener noreferrer">Medium ↗</a>
+      <a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer">X ↗</a>
+      <a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+      <details class="more-links"><summary>More</summary><div>
+        <a href="https://stackoverflow.com/users/9970629/tplusk" target="_blank" rel="noopener noreferrer">Stack Overflow ↗</a>
+        <a href="https://www.youtube.com/channel/UCHq9PYerV7OnYbJw5EHKQlA" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+        <a href="https://open.spotify.com/user/224qqcv3bwopg7srmr73b7duq" target="_blank" rel="noopener noreferrer">Spotify ↗</a>
+        <a href="https://www.facebook.com/tim.kutcher.3" target="_blank" rel="noopener noreferrer">Facebook ↗</a>
+      </div></details>
+    </nav>
+    <div class="site-footer__bottom"><span>© <span data-current-year>2026</span> Tim Kutcher</span><span>Made by Tim</span></div>
+  </footer>
 </body>
 </html>

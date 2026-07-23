@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Camila &amp; Tim — Wedding Design System · Tim Kutcher</title>
+  <meta name="description" content="A bilingual wedding identity and connected guest experience spanning print, web, personalized RSVP flows, and event tools." />
+  <meta name="theme-color" content="#0c101b" />
+  <link rel="icon" href="../../assets/tk-logo--black.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&amp;family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../brand.css" />
+  <link rel="stylesheet" href="../../styles.css" />
+  <script src="../../main.js" defer></script>
+</head>
+<body class="case-body case-body--wedding">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-mark" href="../../index.html" aria-label="Tim Kutcher — home">
+        <img src="../../assets/tk-logo--black.png" alt="" width="44" height="44" />
+        <span>Tim Kutcher</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="visually-hidden">Toggle navigation</span>
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../../index.html#design">Portfolio</a>
+        <a href="#identity">Identity</a>
+        <a href="#program">Program</a>
+        <a href="#digital">Digital</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="case-main" id="main-content" tabindex="-1">
+    <article>
+      <header class="case-hero">
+        <p class="case-kicker">Project notes · Our wedding · 2025</p>
+        <h1 class="case-title">Designing our wedding.</h1>
+        <p class="case-deck">
+          We started with five words for how we wanted the day to feel: youthful, elegant, fun, romantic, and bilingual. We iterated on the visual direction together and used those ideas to guide the invitations, website, printed pieces, and a few small digital tools.
+        </p>
+        <div class="wedding-theme-strip" aria-label="Design themes">
+          <span>Youthful</span><span>Elegant</span><span>Fun</span><span>Romantic</span><span>Bilingual</span>
+        </div>
+        <dl class="case-meta">
+          <div class="case-stat"><dt>Design</dt><dd>Iterated together by Camila and Tim</dd></div>
+          <div class="case-stat"><dt>It included</dt><dd>Print, web, RSVP, and guest tools</dd></div>
+          <div class="case-stat"><dt>Technology</dt><dd>Webflow + Anvilor forms</dd></div>
+          <div class="case-stat"><dt>When</dt><dd>Miami · 1 March 2025</dd></div>
+        </dl>
+        <figure class="case-hero__visual wedding-artboard">
+          <img src="../../assets/portfolio/wedding/rsvp-insert.png" alt="Full wedding RSVP insert showing the coral, orange, and pink identity, typography, illustrations, date, venue, and QR code" />
+          <figcaption class="case-hero__caption"><span>The design in one piece</span><span>RSVP insert · front</span></figcaption>
+        </figure>
+      </header>
+
+      <section class="case-section" id="identity" aria-labelledby="identity-title">
+        <div class="case-section__head">
+          <p class="case-label">01 / Finding the look</p>
+          <div>
+            <h2 id="identity-title">The invitation set the direction.</h2>
+            <p>We landed on warm Miami colors, a mix of expressive and traditional type, hand-drawn landmarks, and English and Spanish throughout. Once those pieces felt right, we reused them in different ways across the rest of the wedding.</p>
+          </div>
+        </div>
+        <div class="case-columns">
+          <article class="case-panel invitation-panel">
+            <div class="case-panel__image"><img src="../../assets/portfolio/wedding/invitation.png" alt="Bilingual Camila and Tim wedding invitation" /></div>
+            <div class="case-panel__body">
+              <p class="case-label">Invitation</p>
+              <h3>Starting with the invitation</h3>
+              <p>The centered layout gave it some formality, while the oversized names, bilingual copy, and type running off the edges kept it from feeling too serious.</p>
+            </div>
+          </article>
+          <article class="case-panel">
+            <div class="case-panel__image rsvp-pair">
+              <img src="../../assets/portfolio/wedding/rsvp-insert.png" alt="Front of the colorful wedding RSVP insert" />
+              <img src="../../assets/portfolio/wedding/rsvp-back.png" alt="Back of the RSVP insert with RSVP wordmark and unique QR code" />
+            </div>
+            <div class="case-panel__body">
+              <p class="case-label">RSVP insert</p>
+              <h3>The RSVP insert</h3>
+              <p>The front became a little collection of the colors, type, and illustrations. On the back, every guest received their own QR code and Anvilor RSVP link.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="architecture-title">
+        <div class="case-section__head">
+          <p class="case-label">02 / RSVP</p>
+          <div>
+            <h2 id="architecture-title">How the RSVP worked.</h2>
+            <p>Each invitation had a unique link. Scanning the QR code opened an Anvilor form already connected to that guest or household, so people did not have to search for their invitation or create an account.</p>
+          </div>
+        </div>
+        <div class="architecture-flow" aria-label="Personalized RSVP flow">
+          <article class="architecture-card">
+            <span class="feature-index">01 / Invitation</span>
+            <h3>A link for each guest</h3>
+            <p>The QR code on the insert was generated for the specific person or household receiving it.</p>
+          </article>
+          <article class="architecture-card">
+            <span class="feature-index">02 / Anvilor</span>
+            <h3>The right RSVP form</h3>
+            <p>The link opened the right RSVP flow with the guest’s invitation already associated.</p>
+          </article>
+          <article class="architecture-card">
+            <span class="feature-index">03 / Response</span>
+            <h3>A simpler response</h3>
+            <p>Guests could respond without an account, and we received the answers in a useful, structured format.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section" id="program" aria-labelledby="program-title">
+        <div class="case-section__head">
+          <p class="case-label">03 / Ceremony program</p>
+          <div>
+            <h2 id="program-title">The ceremony program.</h2>
+            <p>For the eight-page program, we pulled the design back: lots of white space, warm brown type, coral rules, and bilingual headings. You can use the controls—or your arrow keys—to flip through it.</p>
+          </div>
+        </div>
+        <div
+          class="book-viewer"
+          data-book-viewer
+          data-pages="../../assets/portfolio/wedding/program/a5-p1.png, ../../assets/portfolio/wedding/program/a5-p2.png, ../../assets/portfolio/wedding/program/a5-p3.png, ../../assets/portfolio/wedding/program/a5-p4.png, ../../assets/portfolio/wedding/program/a5-p5.png, ../../assets/portfolio/wedding/program/a5-p6.png, ../../assets/portfolio/wedding/program/a5-p7.png, ../../assets/portfolio/wedding/program/a5-p8.png"
+          tabindex="0"
+          aria-keyshortcuts="ArrowLeft ArrowRight"
+          aria-label="Interactive ceremony program preview"
+        >
+          <div class="book-spread">
+            <figure class="book-page"><img data-book-left src="../../assets/portfolio/wedding/program/a5-p1.png" alt="Ceremony program page 1" /></figure>
+            <figure class="book-page"><img data-book-right src="../../assets/portfolio/wedding/program/a5-p2.png" alt="Ceremony program page 2" /></figure>
+          </div>
+          <div class="book-controls">
+            <button class="book-button" type="button" data-book-previous aria-label="Previous program pages">← Prev</button>
+            <span class="book-count" data-book-count aria-live="polite">1–2 / 8</span>
+            <button class="book-button" type="button" data-book-next aria-label="Next program pages">Next →</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="tables-title">
+        <div class="table-detail-grid">
+          <img src="../../assets/portfolio/wedding/table-number.png" alt="Table number three with a repeating three and tres typographic pattern" />
+          <div>
+            <p class="case-label">04 / Table numbers</p>
+            <h2 id="tables-title" style="font-size:clamp(2.35rem,5.2vw,4.75rem);line-height:.98;letter-spacing:-.05em;font-weight:500;margin-top:1rem">A small detail in the table numbers.</h2>
+            <p style="margin-top:1.2rem;color:var(--color-ink-muted);font-size:1.05rem;line-height:1.68">The big number needed to be easy to see from across the room. In the background, we repeated the number spelled out in English and Spanish—“three” and “tres”—using the Brown Sugar typeface.</p>
+            <div class="table-zoom" role="img" aria-label="Magnified detail of the repeating three and tres background typography"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="case-section" aria-labelledby="dayof-title">
+        <div class="seating-summary">
+          <div>
+            <p class="case-label">05 / Seating</p>
+            <h2 id="dayof-title">A searchable seating chart.</h2>
+            <p>The printed chart included a QR code that opened a searchable table finder, giving guests a quicker option on their phones.</p>
+          </div>
+          <figure class="seating-summary__preview">
+            <img src="../../assets/portfolio/wedding/seating-chart.png" alt="Bottom corner of the seating chart showing its QR code" />
+            <figcaption>Scan → search → find your table</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section" id="digital" aria-labelledby="digital-title">
+        <div class="case-section__head">
+          <p class="case-label">06 / Wedding website</p>
+          <div>
+            <h2 id="digital-title">The wedding website.</h2>
+            <p>The website used the same colors, wordmark, drawings, and block layout as the printed pieces. Mostly, it was a cheerful place to keep all of the practical information people needed for the weekend.</p>
+          </div>
+        </div>
+        <div class="website-preview">
+          <div class="website-preview__bar"><span>boda-archive.camilaandtim.com</span><a class="external-button" href="https://boda-archive.camilaandtim.com" target="_blank" rel="noopener noreferrer">Visit archive ↗</a></div>
+          <img src="../../assets/portfolio/wedding/wedding-website-og.png" alt="Collage preview of the colorful Camila and Tim wedding website and its visual identity" />
+        </div>
+      </section>
+    </article>
+
+    <aside class="next-project">
+      <a href="../anvilor/">
+        <span>Next project / Technology R&amp;D</span>
+        <strong>Anvilor →</strong>
+      </a>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__bottom"><span>© <span data-current-year>2026</span> Tim Kutcher</span><a href="../../index.html#design">Back to portfolio ↑</a></div>
+  </footer>
+</body>
+</html>
