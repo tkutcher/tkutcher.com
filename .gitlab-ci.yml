@@ -1,13 +1,12 @@
 
-image: ubuntu:24.04
-
 stages:
   - deploy
 
 deploy:
   stage: deploy
+  image: mcr.microsoft.com/azure-cli:azurelinux3.0
   script:
-    - sh scripts/az-storage-replace-dir.sh -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
+    - ./scripts/az-storage-replace-dir.sh -n tkutchercomdevwa01 -k "$AZURE_STORAGE_ACCOUNT_KEY" -s src -d ""
   only:
     - main
 
