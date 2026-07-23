@@ -865,6 +865,12 @@ main:focus {
   font-weight: 500;
 }
 
+.hero-socials img {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+}
+
 .portfolio-section,
 .solutions-section {
   width: min(calc(100% - 2rem), var(--site-width));
