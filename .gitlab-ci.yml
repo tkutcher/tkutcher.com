@@ -1,5 +1,5 @@
 
-image: "alpine:latest"
+image: ubuntu:24.04
 
 stages:
   - deploy
