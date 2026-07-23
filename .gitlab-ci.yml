@@ -1,6 +1,5 @@
 
-# Using work buildtools (with CTO approval 😬) to get az-storage-replace-dir
-image: registry.gitlab.com/dicorp/v2/techsec/anvilor/buildtools/py3.13-node22:latest
+image: "alpine:latest"
 
 stages:
   - deploy
@@ -8,7 +7,7 @@ stages:
 deploy:
   stage: deploy
   script:
-    - az-storage-replace-dir -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
+    - sh scripts/az-storage-replace-dir.sh -n tkutchercomdevwa01 -k $AZURE_STORAGE_ACCOUNT_KEY -s src -d "" -c "$web"
   only:
     - main
 
