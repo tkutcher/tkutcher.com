@@ -58,8 +58,16 @@ main:focus {
   align-items: center;
   gap: 0.8rem;
   color: var(--color-ink);
-  font-weight: 600;
   text-decoration: none;
+}
+
+.brand-mark > span {
+  color: var(--color-ink-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.57rem;
+  font-weight: 500;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
 .brand-mark img {
