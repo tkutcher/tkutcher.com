@@ -19,8 +19,8 @@
   --brand-color-focus: #9fb8e8;
   --brand-color-line: rgba(111, 143, 191, 0.24);
   --brand-color-line-strong: rgba(152, 137, 255, 0.42);
-  --brand-color-surface: rgba(18, 23, 38, 0.8);
-  --brand-color-surface-strong: rgba(24, 30, 49, 0.94);
+  --brand-color-surface: #121726;
+  --brand-color-surface-strong: #181e31;
 
   /* Brand effects */
   --brand-shadow-soft: 0 24px 64px rgba(0, 0, 0, 0.32);

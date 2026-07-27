@@ -29,6 +29,8 @@
       <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
         <a href="#design">Design</a>
         <a href="#solutions">Solutions</a>
+        <a href="./sports/">Sports</a>
+        <a href="./reading/">Reading</a>
         <a href="#elsewhere">Links</a>
         <a class="nav-archive" href="https://v1-archive.tkutcher.com" target="_blank" rel="noopener noreferrer">Old site ↗</a>
       </nav>
@@ -38,11 +40,12 @@
   <main id="main-content" tabindex="-1">
     <section class="icon-hero" aria-labelledby="hero-title">
       <div class="icon-hero__mark">
-        <img src="./assets/tk-logo--black.png" alt="TK monogram" width="440" height="440" />
+        <img class="icon-hero__logo" src="./assets/tk-logo--black.png" alt="TK monogram" width="440" height="440" />
+        <img class="icon-hero__avi" src="./assets/tim-avi.png" alt="Illustrated portrait of Tim Kutcher" width="640" height="640" />
       </div>
       <div class="icon-hero__copy">
         <h1 class="icon-hero__greeting" id="hero-title">Hi — I’m Tim.</h1>
-        <p class="icon-hero__tagline">Jack of all trades, master of some.</p>
+        <p class="icon-hero__tagline">Jack of many trades, master of some.</p>
         <p class="icon-hero__about">I’m a software engineer &amp; solutions architect for the web, athlete &amp; athletics coach, and am working to use those passions to send some positive energy out into the world.</p>
         <nav class="hero-socials" aria-label="Main social profiles">
           <a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer" aria-label="GitHub, @tkutcher">
@@ -132,17 +135,24 @@
       <div class="build-grid">
         <article class="build-card build-card--anvilor">
           <div class="build-card__top"><span>Current focus</span><span>Technology R&amp;D</span></div>
-          <img src="./assets/portfolio/anvilor/anvilor-wordmark.png" alt="Anvilor" />
-          <p>A project I work on at DICORP for smarter forms, connected workflows, and useful tools for community and philanthropic work.</p>
-          <a href="./work/anvilor/">What I’m working on →</a>
+          <div class="build-card__content build-card__content--anvilor">
+            <a class="build-card__anvilor-link" href="https://anvilor.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Anvilor">
+              <img class="build-card__anvilor-logo" src="./assets/portfolio/anvilor/anvilor-wordmark.png" alt="Anvilor" />
+            </a>
+            <h3>Anvilor</h3>
+            <p>A project I work on at DICORP for smarter forms, connected workflows, and useful tools for community and philanthropic work.</p>
+            <a href="https://anvilor.com" target="_blank" rel="noopener noreferrer">Explore Anvilor ↗</a>
+          </div>
         </article>
 
         <article class="build-card build-card--company">
-          <div class="build-card__top"><span>Company work</span><span>Web + software</span></div>
-          <div class="build-card__initials" aria-hidden="true">DI</div>
+          <div class="build-card__top"><span>Company work</span><span>Trauma software</span></div>
+          <a class="build-card__company-logo" href="https://ditrauma.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Digital Innovation Trauma">
+            <img src="./assets/portfolio/dicorp/di-logo.png" alt="Digital Innovation" />
+          </a>
           <h3>DICORP &amp; Digital Innovation</h3>
-          <p>My day-to-day home for software engineering, solution architecture, R&amp;D, and work across healthcare, public safety, and philanthropic initiatives.</p>
-          <div class="build-card__links"><a href="https://dicorp.com" target="_blank" rel="noopener noreferrer">DICORP ↗</a><a href="https://www.dicorp.com/about/company/corporate" target="_blank" rel="noopener noreferrer">Digital Innovation ↗</a></div>
+          <p>At DICORP, I serve as Technology and Security Officer for our trauma software solutions—working across product technology, software engineering, solution architecture, and security.</p>
+          <a href="https://ditrauma.com" target="_blank" rel="noopener noreferrer">Explore DI Trauma ↗</a>
         </article>
 
         <article class="build-card build-card--code">
@@ -162,17 +172,129 @@
         </article>
       </div>
     </section>
+
+    <section class="sports-teaser" aria-labelledby="sports-teaser-title">
+      <p class="collection-heading__label">Sports</p>
+      <div class="sports-teaser__content">
+        <div class="sports-teaser__copy">
+          <h2 id="sports-teaser-title">Sports are fun.</h2>
+          <p>Coaching. Baseball. Volleyball. Golf. Running. Broomball?</p>
+          <a class="project-note-link" href="./sports/">Go to sports →</a>
+        </div>
+
+        <div class="sports-teaser__thumbs" aria-label="Sports highlights">
+          <a class="sports-thumb" href="./sports/#baseball">
+            <span class="sports-thumb__media sports-thumb__media--video">
+              <img src="./assets/sports/home/sportscenter-top10.webp" alt="Tim making a catch at the outfield wall" width="640" height="360" loading="lazy" />
+              <span class="sports-thumb__play" aria-hidden="true">▶</span>
+            </span>
+            <span class="sports-thumb__body">
+              <small>Baseball</small>
+              <strong>SportsCenter Top 10</strong>
+            </span>
+          </a>
+
+          <a class="sports-thumb" href="./sports/#baseball">
+            <span class="sports-thumb__media sports-thumb__media--video">
+              <img src="./assets/sports/home/cws-walkoff.webp" alt="Johns Hopkins baseball during the College World Series" width="640" height="360" loading="lazy" />
+              <span class="sports-thumb__play" aria-hidden="true">▶</span>
+            </span>
+            <span class="sports-thumb__body">
+              <small>Baseball</small>
+              <strong>CWS walk-off</strong>
+            </span>
+          </a>
+
+          <a class="sports-thumb" href="./sports/#running">
+            <span class="sports-thumb__media">
+              <img src="./assets/sports/home/coastal-half-pr.webp" alt="Map of the Coastal Delaware Half Marathon route" width="640" height="360" loading="lazy" />
+              <span class="sports-thumb__stat">Half marathon · 8:30 /mi · PR</span>
+            </span>
+            <span class="sports-thumb__body">
+              <small>Running</small>
+              <strong>Coastal Delaware Half</strong>
+            </span>
+          </a>
+
+          <a class="sports-thumb" href="./sports/#running">
+            <span class="sports-thumb__media">
+              <img src="./assets/sports/home/bel-air-town-run.webp" alt="Map of the Bel Air Town Run route" width="640" height="360" loading="lazy" />
+              <span class="sports-thumb__stat">5K · 8:07 /mi</span>
+            </span>
+            <span class="sports-thumb__body">
+              <small>Running</small>
+              <strong>Bel Air Town Run</strong>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reading-teaser" aria-labelledby="reading-teaser-title">
+      <div class="collection-heading">
+        <p class="collection-heading__label">Reading list</p>
+        <div>
+          <h2 id="reading-teaser-title">On the shelf.</h2>
+          <p>What I’ve read and what I’m reading.</p>
+          <a class="project-note-link" href="./reading/">See the reading list →</a>
+        </div>
+      </div>
+      <div
+        class="reading-carousel"
+        data-reading-carousel
+        role="region"
+        aria-label="Reading list preview"
+      >
+        <div class="reading-carousel__controls" aria-label="Reading list carousel controls">
+          <button type="button" data-carousel-previous aria-controls="reading-preview" aria-label="Previous books" disabled>←</button>
+          <button type="button" data-carousel-next aria-controls="reading-preview" aria-label="Next books" disabled>→</button>
+        </div>
+        <div
+          class="reading-grid reading-grid--preview"
+          id="reading-preview"
+          data-reading-list
+          data-reading-source="./reading/reading-list.json"
+          aria-live="polite"
+        >
+          <p class="reading-list__message">Loading the shelf…</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="elsewhere">
     <div class="site-footer__lead site-footer__lead--simple"><p>You can also find me around the internet.</p></div>
-    <nav class="social-links social-links--simple" aria-label="Social links">
-      <a href="https://www.linkedin.com/in/tim-kutcher-a7831416a/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-      <a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-      <a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer">GitLab ↗</a>
-      <a href="https://medium.com/@tkutcher" target="_blank" rel="noopener noreferrer">Medium ↗</a>
-      <a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer">X ↗</a>
-      <a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+    <nav class="social-links social-links--simple social-links--featured" aria-label="Social links">
+      <a href="https://www.linkedin.com/in/tim-kutcher-a7831416a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn, Tim Kutcher">
+        <img src="./assets/social/linkedin.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>LinkedIn</strong><small>Tim Kutcher</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://github.com/tkutcher" target="_blank" rel="noopener noreferrer" aria-label="GitHub, @tkutcher">
+        <img src="./assets/social/github.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>GitHub</strong><small>@tkutcher</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://gitlab.com/tkutcher" target="_blank" rel="noopener noreferrer" aria-label="GitLab, @tkutcher">
+        <img src="./assets/social/gitlab.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>GitLab</strong><small>@tkutcher</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://medium.com/@tkutcher" target="_blank" rel="noopener noreferrer" aria-label="Medium, @tkutcher">
+        <img src="./assets/social/medium.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>Medium</strong><small>@tkutcher</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://twitter.com/tkutcher_" target="_blank" rel="noopener noreferrer" aria-label="X, @tkutcher_">
+        <img src="./assets/social/x.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>X</strong><small>@tkutcher_</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
+      <a href="https://www.instagram.com/tkutcher_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram, @tkutcher_">
+        <img src="./assets/social/instagram.svg" alt="" width="28" height="28" />
+        <span class="social-link__text"><strong>Instagram</strong><small>@tkutcher_</small></span>
+        <span class="social-link__arrow" aria-hidden="true">↗</span>
+      </a>
       <details class="more-links"><summary>More</summary><div>
         <a href="https://stackoverflow.com/users/9970629/tplusk" target="_blank" rel="noopener noreferrer">Stack Overflow ↗</a>
         <a href="https://www.youtube.com/channel/UCHq9PYerV7OnYbJw5EHKQlA" target="_blank" rel="noopener noreferrer">YouTube ↗</a>
