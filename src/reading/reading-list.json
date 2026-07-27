@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "books": [
+    {
+      "slug": "history-of-money-david-mcwilliams",
+      "title": "History of Money",
+      "author": "David McWilliams",
+      "status": "currently-reading",
+      "coverUrl": "../assets/reading/covers/history-of-money-david-mcwilliams.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "amp-it-up-frank-slootman",
+      "title": "Amp It Up",
+      "author": "Frank Slootman",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/amp-it-up-frank-slootman.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "atomic-habits-james-clear",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/atomic-habits-james-clear.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "essentialism-george-mckeown",
+      "title": "Essentialism",
+      "author": "George McKeown",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/essentialism-george-mckeown.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "extreme-ownership-jocko-willink",
+      "title": "Extreme Ownership",
+      "author": "Jocko Willink",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/extreme-ownership-jocko-willink.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "getting-things-done-david-allen",
+      "title": "Getting Things Done",
+      "author": "David Allen",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/getting-things-done-david-allen.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "golf-is-not-a-game-of-perfect",
+      "title": "Golf Is Not A Game of Perfect",
+      "author": "",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/golf-is-not-a-game-of-perfect.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "inner-excellence-jim-murphy",
+      "title": "Inner Excellence",
+      "author": "Jim Murphy",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/inner-excellence-jim-murphy.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "mans-search-for-meaning-viktor-frankl",
+      "title": "Mans Search For Meaning",
+      "author": "Viktor Frankl",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/mans-search-for-meaning-viktor-frankl.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "outliers-malcolm-gladwell",
+      "title": "Outliers",
+      "author": "Malcolm Gladwell",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/outliers-malcolm-gladwell.webp",
+      "openLibraryUrl": "https://openlibrary.org/works/OL5749847W"
+    },
+    {
+      "slug": "sapiens-yuval-noah-harari",
+      "title": "Sapiens",
+      "author": "Yuval Noah Harari",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/sapiens-yuval-noah-harari.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "start-with-why-simon-sinek",
+      "title": "Start With Why",
+      "author": "Simon Sinek",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/start-with-why-simon-sinek.webp",
+      "openLibraryUrl": ""
+    },
+    {
+      "slug": "wedding-toasts-i-d-never-give-ada-calhoun",
+      "title": "Wedding Toasts I'd Never Give",
+      "author": "Ada Calhoun",
+      "status": "read",
+      "coverUrl": "../assets/reading/covers/wedding-toasts-i-d-never-give-ada-calhoun.webp",
+      "openLibraryUrl": ""
+    }
+  ]
+}
