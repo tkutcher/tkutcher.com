@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Brand kit — tkutcher.com</title>
+  <meta
+    name="description"
+    content="Internal brand utility: export the TK mark at any size, format, background, and margin."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../../brand-spec.css" />
+  <link rel="stylesheet" href="./brand.css" />
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="kit-shell">
+  <header class="kit-head">
+    <p class="kit-eyebrow type-label-medium">tkutcher.com <span aria-hidden="true">/</span> .tk <span aria-hidden="true">/</span> brand</p>
+    <h1 class="type-display-small kit-title">Brand kit</h1>
+    <p class="type-body-large kit-lede">
+      Export the mark at the size, format, background, and margin you need.
+      Backgrounds default to transparent. Settings below apply to every asset.
+    </p>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <form class="kit-controls" id="kit-controls" aria-label="Export settings">
+      <div class="ctl">
+        <label class="type-label-medium" for="ctl-bg">Background</label>
+        <select id="ctl-bg" class="field">
+          <option value="transparent" selected>Transparent</option>
+          <option value="#f5f3ee">Paper</option>
+          <option value="#fbfaf8">Paper bright</option>
+          <option value="#ffffff">White</option>
+          <option value="#5e81ac">Primary</option>
+          <option value="#334152">Primary deep</option>
+          <option value="#111111">Ink</option>
+          <option value="custom">Custom&hellip;</option>
+        </select>
+        <input
+          type="color"
+          id="ctl-bg-custom"
+          class="field field-color"
+          value="#5e81ac"
+          aria-label="Custom background color"
+          hidden
+        />
+      </div>
+
+      <div class="ctl">
+        <label class="type-label-medium" for="ctl-size">Size (px)</label>
+        <select id="ctl-size" class="field">
+          <option>16</option>
+          <option>32</option>
+          <option>48</option>
+          <option>64</option>
+          <option>128</option>
+          <option>180</option>
+          <option>256</option>
+          <option>512</option>
+          <option selected>1024</option>
+          <option>2048</option>
+          <option>4096</option>
+          <option value="custom">Custom&hellip;</option>
+        </select>
+        <input
+          type="number"
+          id="ctl-size-custom"
+          class="field field-num"
+          min="8"
+          max="8192"
+          step="1"
+          value="1024"
+          aria-label="Custom size in pixels"
+          hidden
+        />
+      </div>
+
+      <div class="ctl">
+        <label class="type-label-medium" for="ctl-margin">Margin</label>
+        <select id="ctl-margin" class="field">
+          <option value="0" selected>None</option>
+          <option value="0.04">4%</option>
+          <option value="0.08">8%</option>
+          <option value="0.12">12%</option>
+          <option value="0.16">16%</option>
+          <option value="0.25">25%</option>
+          <option value="custom">Custom&hellip;</option>
+        </select>
+        <input
+          type="number"
+          id="ctl-margin-custom"
+          class="field field-num"
+          min="0"
+          max="45"
+          step="1"
+          value="10"
+          aria-label="Custom margin, percent"
+          hidden
+        />
+      </div>
+
+      <div class="ctl">
+        <label class="type-label-medium" for="ctl-shape">Canvas</label>
+        <select id="ctl-shape" class="field">
+          <option value="natural" selected>Natural</option>
+          <option value="square">Square</option>
+        </select>
+      </div>
+
+      <div class="ctl">
+        <label class="type-label-medium" for="ctl-format">Format</label>
+        <select id="ctl-format" class="field">
+          <option value="svg" selected>SVG</option>
+          <option value="png">PNG</option>
+          <option value="webp">WebP</option>
+          <option value="jpeg">JPEG</option>
+        </select>
+      </div>
+
+      <p class="ctl-note type-body-small" id="ctl-note" role="status"></p>
+    </form>
+
+    <section class="kit-section" aria-labelledby="assets-title">
+      <h2 class="type-headline-small" id="assets-title">The mark</h2>
+      <p class="type-body-medium kit-section-lede">
+        One glyph, five colorways. Light colorways go on light grounds;
+        white and paper go on dark ones.
+      </p>
+      <div class="asset-grid" id="asset-grid"></div>
+    </section>
+
+    <section class="kit-section" aria-labelledby="palette-title">
+      <h2 class="type-headline-small" id="palette-title">Palette</h2>
+      <p class="type-body-medium kit-section-lede">
+        The settled palette, read straight from
+        <code class="type-code">brand-spec.css</code>. Click a swatch to copy its hex.
+      </p>
+      <div class="swatch-grid" id="swatch-grid"></div>
+    </section>
+
+    <section class="kit-section" aria-labelledby="type-title">
+      <h2 class="type-headline-small" id="type-title">Typography</h2>
+      <div class="type-specimens">
+        <div class="specimen">
+          <p class="type-label-medium specimen-label">Space Grotesk &mdash; display &amp; text</p>
+          <p class="type-display-small specimen-line">Tim Kutcher</p>
+          <p class="type-body-medium specimen-line">
+            The quick brown fox jumps over the lazy dog. 0123456789
+          </p>
+        </div>
+        <div class="specimen">
+          <p class="type-label-medium specimen-label">JetBrains Mono &mdash; code &amp; handles</p>
+          <p class="type-code specimen-line">@tkutcher &mdash; tkutcher.com</p>
+          <p class="type-code specimen-line">const settled = "#5e81ac";</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="kit-foot">
+    <p class="type-body-small">
+      Internal utility &mdash; not linked from the site.
+      <a href="/">tkutcher.com &rarr;</a>
+    </p>
+  </footer>
+</div>
+<script src="./brand.js"></script>
+</body>
+</html>
