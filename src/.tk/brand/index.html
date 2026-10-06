@@ -9,53 +9,52 @@
     name="description"
     content="Internal brand utility: export the TK mark at any size, format, background, and margin."
   />
+  <link rel="icon" href="../../assets/tk-logo--black.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="../../brand-spec.css" />
-  <link rel="stylesheet" href="./brand.css" />
+  <!-- The site's real brand system. Every colour on this page is read back
+       out of these custom properties at runtime, so the kit cannot drift. -->
+  <link rel="stylesheet" href="../../brand.css" />
+  <link rel="stylesheet" href="./kit.css" />
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <div class="kit-shell">
   <header class="kit-head">
-    <p class="kit-eyebrow type-label-medium">tkutcher.com <span aria-hidden="true">/</span> .tk <span aria-hidden="true">/</span> brand</p>
-    <h1 class="type-display-small kit-title">Brand kit</h1>
+    <a class="kit-brand" href="../../index.html" aria-label="Tim Kutcher — home">
+      <img src="../../assets/tk-logo--black.png" alt="" width="44" height="44" />
+      <span>tkutcher</span>
+    </a>
+    <p class="kit-eyebrow">tkutcher.com <span aria-hidden="true">/</span> .tk <span aria-hidden="true">/</span> brand</p>
+    <h1 class="kit-title">Brand kit</h1>
     <p class="type-body-large kit-lede">
       Export the mark at the size, format, background, and margin you need.
       Backgrounds default to transparent. Settings below apply to every asset.
     </p>
+    <p class="kit-source" id="kit-source"></p>
   </header>
 
   <main id="main-content" tabindex="-1">
     <form class="kit-controls" id="kit-controls" aria-label="Export settings">
       <div class="ctl">
-        <label class="type-label-medium" for="ctl-bg">Background</label>
-        <select id="ctl-bg" class="field">
-          <option value="transparent" selected>Transparent</option>
-          <option value="#f5f3ee">Paper</option>
-          <option value="#fbfaf8">Paper bright</option>
-          <option value="#ffffff">White</option>
-          <option value="#5e81ac">Primary</option>
-          <option value="#334152">Primary deep</option>
-          <option value="#111111">Ink</option>
-          <option value="custom">Custom&hellip;</option>
-        </select>
+        <label for="ctl-bg">Background</label>
+        <select id="ctl-bg" class="field"></select>
         <input
           type="color"
           id="ctl-bg-custom"
           class="field field-color"
-          value="#5e81ac"
+          value="#9889ff"
           aria-label="Custom background color"
           hidden
         />
       </div>
 
       <div class="ctl">
-        <label class="type-label-medium" for="ctl-size">Size (px)</label>
+        <label for="ctl-size">Size (px)</label>
         <select id="ctl-size" class="field">
           <option>16</option>
           <option>32</option>
@@ -84,7 +83,7 @@
       </div>
 
       <div class="ctl">
-        <label class="type-label-medium" for="ctl-margin">Margin</label>
+        <label for="ctl-margin">Margin</label>
         <select id="ctl-margin" class="field">
           <option value="0" selected>None</option>
           <option value="0.04">4%</option>
@@ -108,7 +107,7 @@
       </div>
 
       <div class="ctl">
-        <label class="type-label-medium" for="ctl-shape">Canvas</label>
+        <label for="ctl-shape">Canvas</label>
         <select id="ctl-shape" class="field">
           <option value="natural" selected>Natural</option>
           <option value="square">Square</option>
@@ -116,7 +115,7 @@
       </div>
 
       <div class="ctl">
-        <label class="type-label-medium" for="ctl-format">Format</label>
+        <label for="ctl-format">Format</label>
         <select id="ctl-format" class="field">
           <option value="svg" selected>SVG</option>
           <option value="png">PNG</option>
@@ -129,37 +128,59 @@
     </form>
 
     <section class="kit-section" aria-labelledby="assets-title">
-      <h2 class="type-headline-small" id="assets-title">The mark</h2>
+      <h2 id="assets-title">The mark</h2>
       <p class="type-body-medium kit-section-lede">
-        One glyph, five colorways. Light colorways go on light grounds;
-        white and paper go on dark ones.
+        One glyph, six colorways, each filled from a live brand token.
+        The site is dark-first, so <b>ink</b> is the default mark &mdash; it is what
+        the header and hero actually render. Use <b>paper</b> on light grounds.
       </p>
       <div class="asset-grid" id="asset-grid"></div>
+      <p class="kit-callout" id="kit-callout"></p>
     </section>
 
     <section class="kit-section" aria-labelledby="palette-title">
-      <h2 class="type-headline-small" id="palette-title">Palette</h2>
+      <h2 id="palette-title">Core palette</h2>
       <p class="type-body-medium kit-section-lede">
-        The settled palette, read straight from
-        <code class="type-code">brand-spec.css</code>. Click a swatch to copy its hex.
+        Read live from <code>brand.css</code> at page load &mdash; this list is the
+        site's tokens, not a copy of them. Click a swatch to copy its value.
       </p>
       <div class="swatch-grid" id="swatch-grid"></div>
+      <div class="token-actions">
+        <button class="btn btn-ghost" id="copy-tokens" type="button"
+                data-label="Copy tokens JSON">Copy tokens JSON</button>
+        <button class="btn btn-ghost" id="download-tokens" type="button"
+                data-label="Download tokens.json">Download tokens.json</button>
+        <span class="token-actions__hint">
+          Every colour on this page in one payload &mdash; for syncing the Figma
+          variable collection to the site rather than by eye.
+        </span>
+      </div>
+    </section>
+
+    <section class="kit-section" aria-labelledby="accents-title">
+      <h2 id="accents-title">Case accents</h2>
+      <p class="type-body-medium kit-section-lede">
+        Each portfolio case study retints itself with a
+        <code>--case-accent</code>. These ship in <code>styles.css</code> on the
+        <code>.case-body--*</code> classes.
+      </p>
+      <div class="swatch-grid swatch-grid--accents" id="accent-grid"></div>
     </section>
 
     <section class="kit-section" aria-labelledby="type-title">
-      <h2 class="type-headline-small" id="type-title">Typography</h2>
+      <h2 id="type-title">Typography</h2>
       <div class="type-specimens">
         <div class="specimen">
-          <p class="type-label-medium specimen-label">Space Grotesk &mdash; display &amp; text</p>
-          <p class="type-display-small specimen-line">Tim Kutcher</p>
+          <p class="specimen-label">Space Grotesk &mdash; display &amp; text</p>
+          <p class="specimen-display">Hi &mdash; I&rsquo;m Tim.</p>
           <p class="type-body-medium specimen-line">
             The quick brown fox jumps over the lazy dog. 0123456789
           </p>
         </div>
         <div class="specimen">
-          <p class="type-label-medium specimen-label">JetBrains Mono &mdash; code &amp; handles</p>
+          <p class="specimen-label">JetBrains Mono &mdash; labels, nav &amp; code</p>
           <p class="type-code specimen-line">@tkutcher &mdash; tkutcher.com</p>
-          <p class="type-code specimen-line">const settled = "#5e81ac";</p>
+          <p class="type-code specimen-line">--brand-color-accent: #9889ff;</p>
         </div>
       </div>
     </section>
@@ -167,11 +188,11 @@
 
   <footer class="kit-foot">
     <p class="type-body-small">
-      Internal utility &mdash; not linked from the site.
-      <a href="/">tkutcher.com &rarr;</a>
+      Internal utility &mdash; not linked from the site nav.
+      <a href="../../index.html">tkutcher.com &rarr;</a>
     </p>
   </footer>
 </div>
-<script src="./brand.js"></script>
+<script src="./kit.js"></script>
 </body>
 </html>
